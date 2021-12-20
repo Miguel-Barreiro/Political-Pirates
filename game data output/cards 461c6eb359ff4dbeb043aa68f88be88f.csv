@@ -1,0 +1,76 @@
+﻿NAME,3PlayersOnly,CARD_TEXT,GAIN,IS_EVENT,REQUIREMENTS,SCHEME_TYPE,SCORE,SUPER_GAIN,StartingScheme,TRIGGER,WOOD_COST,copies,createdTime,dataType,design type,done,id
+say anything,No,"execute a talk boosted event, Super: super the event","execute, maneuver_1",No,TALK_2,TALK,vote_1,utility,No,TALK,2,1,"November 15, 2021 12:05 AM",CARD IDEAS,"event, maneuvers, votes",No,46256f3af2474a56863553b632dc1ab1
+ocean gaze,No,refresh 2 schemes,"draw_3, utility",No,TALK_1,TALK,vote_1,maneuver_1,No,TALK,2,1,"November 14, 2021 3:41 PM",CARD IDEAS,"draw, maneuvers, votes",No,1f1f118744a54728bddc786ee05bc325
+secret tree house,No,,maneuver_4,No,TALK_3,TALK,vote_6,promote,No,AMBUSH,5,1,"November 12, 2021 4:21 PM",CARD IDEAS,"constrution, maneuvers, promote, votes",No,2faa3dba14254fa0ab8572c2d69e8aab
+gather support,No,recruit a neutral pirate for free,"maneuver_2, recruit-Free",No,TALK_1,TALK,vote_2,draw_3,No,AMBUSH,4,1,"November 11, 2021 3:49 PM",CARD IDEAS,"draw, maneuvers, recruit, votes",No,e3940018b4b041fe9c48678bff6f2071
+adapt to eat,No,"Execute a food boosted event, Super: super the event ","execute, food_4",No,FOOD_1,FOOD,vote_1,utility,No,TALK,1,1,"November 14, 2021 11:36 PM",CARD IDEAS,"event, food, votes",No,3a6be83f15b545b2a21a3f2ebb06b6e8
+coconut shade,No,,"draw_3, food_1",No,,FOOD_TALK,,food_3,No,AMBUSH,1,1,"November 14, 2021 4:10 PM",CARD IDEAS,"draw, food, maneuvers",No,e8383da614354a5392af509da025020f
+"trapping ",No,PASSIVE: food scheme played gain +2food,"food_2, passive",No,FOOD_3,FOOD,vote_4,food_4,No,TALK,4,1,"November 12, 2021 12:22 PM",CARD IDEAS,"constrution, food, passive, votes",No,f564660ae6a0483b828807a1041cc7ef
+cashing favours,No,spend x maneuvers,food_2x,No,FOOD_1,FOOD,vote_2,maneuver_2,No,TALK,2,1,"November 11, 2021 3:49 PM",CARD IDEAS,"food, maneuvers, votes",No,9d656b9bbb7d409a9ab6d20e804f3419
+group hunt,No,x is the number boosted food cards,food_3x,No,FOOD_1,FOOD,vote_1,food_4,No,TALK,2,1,"November 11, 2021 3:49 PM",CARD IDEAS,"draw, food, votes",No,1246869a9efb498d82945b110ca78055
+improvise,No,"execute a boosted event, Super: super the event",execute,No,TALK_2,TALK_AMBUSH,vote_1,utility,No,TALK,2,1,"November 14, 2021 9:51 PM",CARD IDEAS,"boosted, event, votes",No,f3adee4021b94f43a0af4166e97b2702
+embrace chaos,No,"execute 2 boosted events ","execute, execute_",No,"AMBUSH_1, TALK_2",TALK_AMBUSH,vote_2,demote,No,TALK,3,1,"November 14, 2021 4:28 PM",CARD IDEAS,"boosted, demote, event, votes",No,f9809a78b03c427e92beceacb83b340c
+" master builder",No,execute the boosted scheme,"draw_2, wood_3",No,"TALK_1, WOOD_1",WOOD,vote_1,execute,No,TALK,2,1,"November 12, 2021 11:07 AM",CARD IDEAS,"boosted, constrution, draw, execute, votes, wood",No,56ce00b44dd84fc7b50ed6b4b7a01ee3
+scavenge,No,execute a wood event Super: super the event,"execute, wood_2",No,"TALK_1, WOOD_1",WOOD,vote_1,utility,No,TALK,1,1,"November 15, 2021 12:03 AM",CARD IDEAS,"boosted, event, votes, wood",No,286f065f626a4cea866ffffca43a7a11
+construction crew (III),Yes,,wood_5,No,WOOD_3,WOOD,vote_3,wood_4,No,WOOD,4,1,"November 12, 2021 10:59 AM",CARD IDEAS,"constrution, votes, wood",No,a77e4b9a41a745329f568645a19f7504
+dam,No,PASSIVE:  wood schemes gain +1wood,"passive, wood_1",No,WOOD_2,WOOD,vote_4,wood_3,No,TALK,4,1,"November 14, 2021 4:16 PM",CARD IDEAS,"constrution, passive, votes, wood",No,76501c70fca24cd89db26040660584ee
+cashing favours,No,spend x maneuvers,wood_2x,No,WOOD_1,WOOD,vote_2,wood_x,No,AMBUSH,2,1,"November 11, 2021 4:27 PM",CARD IDEAS,"constrution, maneuvers, votes, wood",No,6a00af9212544a45bb70afc702222926
+group harvest,No,x is the number boosted wood cards (max 3),wood_2x,No,WOOD_1,WOOD,vote_1,wood_3,No,TALK,2,1,"November 11, 2021 3:49 PM",CARD IDEAS,"draw, votes, wood",No,7fb77e3a28ff4b219908d060b7960052
+raid wood cache,No,"x is the number wood schemes showing, SUPER: steal half wood gained",wood_x,No,WOOD_1,WOOD_AMBUSH,vote_1,steal,No,WOOD,3,1,"November 12, 2021 11:30 AM",CARD IDEAS,"counter, steal, votes, wood",No,c6843972c08743ed8f5b3af26405ee04
+watch tower,No,steal half wood gained,"draw_2, maneuver_2",No,WOOD_2,WOOD_AMBUSH,vote_5,steal,No,WOOD,5,1,"November 12, 2021 12:11 PM",CARD IDEAS,"constrution, draw, maneuvers, steal, votes",No,9c243937fce1444faf72a8d728dffe93
+raid food cache,No,"x is the total number of food scheme showing, SUPER: steal half food gained",food_2x,No,FOOD_1,FOOD_AMBUSH,vote_1,steal,No,FOOD,2,1,"November 12, 2021 11:25 AM",CARD IDEAS,"counter, food, steal, votes",No,0c97d8f549704bf289adf05e75322774
+hunting shelter,No,steal half food gained,"draw_2, maneuver_1",No,FOOD_3,FOOD_AMBUSH,vote_5,steal,No,FOOD,5,1,"November 15, 2021 12:25 AM",CARD IDEAS,"constrution, draw, maneuvers, votes",No,5cdbd3f08cf240cfa23303ef3549df62
+upgrade shelter,No,,maneuver_3,No,WOOD_3,WOOD_TALK,vote_6,wood_2,No,WOOD,5,1,"November 11, 2021 4:40 PM",CARD IDEAS,"constrution, maneuvers, votes, wood",No,d97b9657d60c45c186e4cdceda6ebf75
+flexible gank,No,steal half of the boosted resource gained,maneuver_2,Yes,TALK_1,TALK_AMBUSH,,steal,No,"FOOD, WOOD",2,1,"November 11, 2021 3:49 PM",CARD IDEAS,"boosted, counter, event, maneuvers, steal, votes",No,5901552cdfbe4a0b9dc3d08ca46bf89d
+pull strings,No,"
+super: recruit the promoted for free","maneuver_2, promote",Yes,TALK_1,TALK,,recruit-Free,No,TALK,0,1,"November 11, 2021 3:49 PM",CARD IDEAS,"event, maneuvers, promote, recruit, votes",No,5c9b267a70994ce9bf11944358d56473
+leftovers,No,x is the number food schemes shown,food_3x,No,FOOD_1,FOOD,vote_1,food_4,No,TALK,2,1,"November 15, 2021 12:22 AM",CARD IDEAS,"counter, draw, food, votes",No,bba73288a67f4a0abf0cbcfc34bd1bcd
+empty promises,No,"PASSIVE:, talk scheme gain +1maneuver","maneuver_1, passive",No,TALK_2,TALK,vote_3,"promote, recruit",No,AMBUSH,3,1,"November 15, 2021 12:34 AM",CARD IDEAS,"maneuvers, passive, promote, recruit, votes",No,c2374594191a4cfb821b15a84d35043e
+spread influence,No,super: recruit for free a neutral pirate,"promote, promote_",Yes,TALK_2,FOOD_TALK,,recruit-Free,No,AMBUSH,0,1,"November 15, 2021 4:31 PM",CARD IDEAS,"counter, event, promote, votes",No,964a250e5c094ab5abc22ce8822b2a8d
+refresh ideas,No,x is the number of boosted (max 4),draw_2x,Yes,,WOOD_TALK,,pushout,No,AMBUSH,1,1,"November 15, 2021 4:39 PM",CARD IDEAS,"boosted, draw, event, pushout, votes",No,492cf103741c43018ee318fa220cbf65
+spread rumors,No,demote 1 OR pushout twice,"demote, pushout, pushout_",Yes,"AMBUSH_2, TALK_1",TALK_AMBUSH,,recruit,No,TALK,2,1,"November 15, 2021 4:39 PM",CARD IDEAS,"counter, demote, event, recruit, votes",No,7c10ac70342e4d1f937c599d002ad827
+rum talk,No,,"demote, food_3",Yes,"AMBUSH_1, FOOD_1",FOOD,,recruit-Free,No,TALK,1,1,"November 15, 2021 4:40 PM",CARD IDEAS,"demote, event, food, recruit, votes",No,73834212d12443fe8f0b5674abe75eb1
+bully,No,pushout x candidates where x is boosted talk schemes (max 4),"demote, pushout_x",No,AMBUSH_2,TALK_AMBUSH,vote_1,demote,No,TALK,2,1,"November 16, 2021 3:59 PM",CARD IDEAS,"boosted, counter, demote, pushout, votes",No,a8a8be5d7d9a45e4b211490d45a1e93c
+raiding woods,No,steal 2x wood where x is boosted,"demote, wood_2",No,WOOD_1,WOOD_AMBUSH,vote_2,steal,No,WOOD,3,1,"November 16, 2021 4:12 PM",CARD IDEAS,"boosted, demote, steal, votes, wood",No,c685289428d2405487bab7c0877c82ce
+spread fear,No,opponents lose 1 maneuver,"demote, utility",Yes,AMBUSH_1,TALK_AMBUSH,,promote,No,TALK,2,1,"November 16, 2021 4:53 PM",CARD IDEAS,"counter, demote, draw, influence",No,cdcfabcce594429ea9abbb97ca65f019
+inspirational walks,No,"PASSIVE:, draw 1 every food or wood scheme played","passive, promote",No,TALK_2,TALK,vote_3,"demote, draw_2",No,AMBUSH,3,1,"November 17, 2021 10:22 AM",CARD IDEAS,"demote, draw, passive, promote, votes",No,a7c5e48f95614a07b450ce4c20de547d
+hard raid,No,,"demote, food_3",Yes,TALK_1,FOOD_AMBUSH,,"maneuver_1, steal",No,FOOD,1,1,"November 17, 2021 11:04 AM",CARD IDEAS,"demote, event, food, influence, maneuvers, steal",No,3dc11941ecc840748b7bf574f16aa957
+short him down,No,x is the number of boosted,"demote, maneuver_1",Yes,TALK_1,WOOD_AMBUSH,,wood_2x,No,WOOD,1,1,"November 17, 2021 11:04 AM",CARD IDEAS,"boosted, demote, event, influence, maneuvers",No,b372ebcc8e02403fa168ccd74343e5d7
+take advantage,No,steal 4 food,"demote, food_2",Yes,FOOD_2,FOOD_AMBUSH,,steal,No,FOOD,1,1,"November 17, 2021 11:05 AM",CARD IDEAS,"demote, event, influence, steal",No,f1b4c24ec28d4ba083f061daaccb5705
+taking credit,No,,"promote, pushout",Yes,"AMBUSH_1, FOOD_1",FOOD_AMBUSH,,"demote, food_2",No,FOOD,0,1,"November 17, 2021 11:18 AM",CARD IDEAS,"demote, event, influence, promote",No,9fd025b6805c4c2995d6c813aa26dcc5
+inside job,No,steal 3 wood,demote,Yes,AMBUSH_1,WOOD_AMBUSH,,steal,No,WOOD,1,1,"November 17, 2021 11:18 AM",CARD IDEAS,"demote, event, influence, steal",No,ce3683e817474a90b6b1a19521f8f4ea
+wood deal,No,x is the boosted schemes number,"promote_x, wood_2",Yes,TALK_1,WOOD_TALK,,demote,No,AMBUSH,0,1,"November 17, 2021 11:20 AM",CARD IDEAS,"boosted, demote, event, influence, promote, wood",No,83f1a2301eb246cb9cd9115fceee8614
+Small Hunt,No,x is the boosted schemes,"food_2x, food_4",No,,FOOD,vote_1,food_2,Yes,TALK,,2,"December 5, 2021 10:35 PM",CARD IDEAS,"boosted, food",No,0a920d4619fc48d595d7359192dda52c
+Small Hunt Ambush,No,steal half of the food gained,"food_2, pushout",No,,FOOD_AMBUSH,vote_1,steal,Yes,FOOD,,3,"December 6, 2021 1:42 AM",CARD IDEAS,"food, pushout, steal",No,f67654c54a254524bc2fd91773ceff0f
+Gather Berry,No,,"food_2, promote",No,,FOOD_TALK,vote_2,demote,Yes,AMBUSH,,3,"December 6, 2021 3:53 PM",CARD IDEAS,"demote, food, promote",No,c3403fa41c0240449a5bf0331e5b2afb
+Gather Wood,No,x is the number of boosted,"wood_3, wood_x",No,,WOOD,vote_1,wood_2,Yes,TALK,,2,"December 6, 2021 3:55 PM",CARD IDEAS,"boosted, wood",No,c001165b8ad141b1b6e66a81abbc4dfc
+Small Wood Ambush,No,steal half wood gained,"draw_1, wood_1",No,,WOOD_AMBUSH,vote_1,steal,Yes,WOOD,,3,"December 6, 2021 3:58 PM",CARD IDEAS,"draw, steal, wood",No,385304cd6ab84e438412b6de7a13d681
+Gather help,No,,"maneuver_2, wood_1",No,,WOOD_TALK,vote_1,demote,Yes,AMBUSH,,3,"December 6, 2021 4:00 PM",CARD IDEAS,"demote, maneuvers, wood",No,db8bccdb28e24e14898216edd719d103
+Small hunt (III),Yes,x is the boosted schemes,"food_2x, food_4",No,,FOOD,vote_2,food_2,Yes,FOOD,,3,"December 6, 2021 4:09 PM",CARD IDEAS,"boosted, food",No,b059eeeca81145f7a0839e8c3caadf9e
+Gather Wood (III),Yes,x is the number of boosted,"wood_3, wood_x",No,,WOOD,vote_1,wood_2,Yes,WOOD,,3,"December 6, 2021 4:11 PM",CARD IDEAS,"boosted, wood",No,ded76ae0254a428faa3d083bdcd951ad
+Planned Hunt,Yes,x is the boosted card number (max 4),food_5,No,,FOOD,vote_2,"draw_x, food_2x",No,FOOD,2,1,"December 6, 2021 4:14 PM",CARD IDEAS,"boosted, draw, food",No,94bb80a690b64b6eb57e314d92732f2d
+Group fishing,Yes,,"food_5, promote",No,WOOD_1,FOOD,vote_3,food_5,No,FOOD,3,1,"December 6, 2021 6:28 PM",CARD IDEAS,"food, promote",No,be1ca66160fe4df3bcd05c70d52672a7
+Cutting together,Yes,x is the boosted schemes ( max 4),"maneuver_2, wood_3",No,WOOD_1,WOOD,vote_2,wood_x,No,WOOD,2,1,"December 6, 2021 6:30 PM",CARD IDEAS,"boosted, maneuvers, wood",No,903b376dd390468d952fd2953b19e609
+respect wood,Yes,x the number of boosted schemes opponent placed,"draw_2, wood_4",No,,WOOD,vote_2,"wood_2, wood_x",No,WOOD,3,1,"December 6, 2021 6:32 PM",CARD IDEAS,"boosted, counter, draw, wood",No,58e398fdde1647c497de40cfc8c3eef1
+group hunt (III),Yes,x is the number boosted food cards,food_3x,No,FOOD_1,FOOD,vote_1,food_4,No,FOOD,2,1,"December 6, 2021 6:38 PM",CARD IDEAS,"draw, food, votes",No,bef1d71f78b645259f8cb1427c074276
+group harvest (III),Yes,x is the number boosted wood cards (max 3),wood_2x,No,WOOD_1,WOOD,vote_1,wood_3,No,WOOD,2,1,"December 6, 2021 6:39 PM",CARD IDEAS,"draw, votes, wood",No,6e12af7f91dd4bb1a4da9ad6a9ea4beb
+"Hire to kill ",No,,"pushout, recruit",No,,TALK,vote_2,demote,No,AMBUSH,2,1,"December 8, 2021 1:46 PM",CARD IDEAS,"demote, pushout, recruit",No,ae67eff941414a708b7d04b60c91b5d2
+Influence,No,,"maneuver_1, recruit",No,,TALK,vote_1,vote_1,No,TALK,2,1,"December 8, 2021 2:08 PM",CARD IDEAS,"maneuvers, recruit, votes",No,0028fc21b4c24c5b8d899590fe2f4588
+secret woods,No,,"maneuver_1, wood_2",Yes,,WOOD_TALK,,influence,No,AMBUSH,0,1,"December 8, 2021 7:10 PM",CARD IDEAS,"maneuvers, wood",No,4d11bb8edee0457281cb4cd4329f1ed8
+neutralise,No,,food_4,Yes,"AMBUSH_1, FOOD_1",FOOD_AMBUSH,,"influence, pushout",No,TALK,1,1,"December 8, 2021 7:14 PM",CARD IDEAS,"food, influence, pushout",No,42816f298bfe44eb849a2cf79928f74a
+Swindle,No,pay opponent (food_2) and steal (wood_4) from him,food_2,Yes,TALK_1,WOOD,,steal,No,"TALK, foodCost_2",0,1,"December 8, 2021 7:16 PM",CARD IDEAS,"counter, food, steal, wood",No,c4ffa6ebb63441ef8746c5542589455b
+Sneaky steal,No,steal (food_3) from the opponent,"draw_1, food_2",No,,FOOD_AMBUSH,vote_1,steal,No,"FOOD, TALK",1,1,"December 8, 2021 7:27 PM",CARD IDEAS,"draw, food, steal",No,f410cd7d51f84ed5b07785b77c2a9cd6
+Planned Harvest,No,,"wood_1, wood_2",No,,WOOD,vote_1,wood_3,No,TALK,1,1,"December 8, 2021 7:30 PM",CARD IDEAS,wood,No,0a8c62dcde774400a8df7234832994cf
+Great Speech,No,,"draw_1, vote_1",No,,TALK,vote_1,"demote, food_3",No,AMBUSH,2,1,"December 14, 2021 4:13 PM",CARD IDEAS,"demote, draw, food, votes",No,fb330650cb0c41c8b62b64661402a718
+Just do it,No,,"draw_2, maneuver_2",No,,TALK_AMBUSH,vote_1,wood_3,No,TALK,2,1,"December 14, 2021 4:17 PM",CARD IDEAS,"draw, maneuvers, wood",No,4f7048133b644dab989d6742a2b1f0ce
+fishing trip,No,,food_5,No,,FOOD,vote_1,"food_2, maneuver_1",No,TALK,1,1,"December 14, 2021 4:19 PM",CARD IDEAS,"food, maneuvers",No,49320bcd74314bcba2bd55d6a883386f
+Target Propaganda,No,,recruit,Yes,,TALK,,influence,No,AMBUSH,1,1,"December 14, 2021 4:22 PM",CARD IDEAS,"influence, recruit",No,513fbb0d53fd4495aeab936e6ed3d041
+Big Harvest,No,,wood_3,Yes,,WOOD,,"maneuver_1, wood_2",No,"TALK, WOOD",,1,"December 14, 2021 4:25 PM",CARD IDEAS,"counter, maneuvers, wood",No,2d61da588fb542cca4d4286317a0bd67
+Sneaky steal,No,steal (wood_2) from the opponent,"draw_1, wood_1",No,,WOOD_AMBUSH,vote_1,steal,No,"TALK, WOOD",1,1,"December 14, 2021 4:28 PM",CARD IDEAS,"draw, steal, wood",No,f4e4e7dfe6924c24ae1098dd1455fe86
+Cause a fight,No,,demote,Yes,,TALK,,influence,No,AMBUSH,2,1,"December 14, 2021 4:29 PM",CARD IDEAS,"demote, event, influence",No,aa7aa909d6fd437183d764045b7d664d
+Counter Ambush,No,,"pushout, wood_2",No,,WOOD_AMBUSH,vote_1,influence,No,AMBUSH,2,1,"December 14, 2021 4:33 PM",CARD IDEAS,"influence, pushout, wood",No,7af27b1b6b0f4fc6b38a5cbb82e88726
+Ambush woods,No,steal half of the wood gained,wood_3,Yes,,WOOD_AMBUSH,,steal,No,WOOD,0,1,"December 14, 2021 4:35 PM",CARD IDEAS,"event, steal, wood",No,941fe28fd7f048128ff891a65d4c88b9
+Big Hunt,No,,food_5,No,,FOOD,vote_2,food_3,No,"FOOD, TALK",2,1,"December 14, 2021 4:38 PM",CARD IDEAS,"counter, food",No,efae535ebf334566a88b9780b6b40ea3
+Steal the moment,No,copy the (talk) scheme,"draw_2, maneuver_2",Yes,,TALK_AMBUSH,,execute,No,TALK,0,1,"December 14, 2021 4:42 PM",CARD IDEAS,"draw, event, execute, maneuvers",Yes,a3626d65fab34e97a8b47dae27902c5f
+"Merry Berries ",No,,food_3,Yes,,FOOD_TALK,,"draw_2, vote_1",No,AMBUSH,0,1,"December 14, 2021 4:45 PM",CARD IDEAS,"draw, event, food, votes",No,e9e4fcd9976640c4ba1e3e8a702bdbf9
+Counter Ambush,No,,food_3,No,,FOOD_AMBUSH,,"food_3, vote_1",No,AMBUSH,2,,"December 14, 2021 4:47 PM",,,No,b4ad4458627648c2a248de3210ec9590

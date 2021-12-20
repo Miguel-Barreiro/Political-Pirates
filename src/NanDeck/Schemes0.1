@@ -1,0 +1,220 @@
+'#########################################
+'Euro-poker cards 2.48 x 3.46 - 825 x 1125
+'#########################################
+UNIT=INCH
+CARDSIZE=2.75,3.75
+BORDER=NONE
+DPI=300
+
+LINKMULTI = copies
+LINK = "11LYC3lbaSMvkLHemIek4mjIKlUnKl6BtS7dmP3hFU9o"
+
+
+
+DISPLAY=output/SchemesTTS.png,1,0,10
+
+
+
+
+BASERANGE = [all], ON
+
+[all]=1-{(card)}
+[permanents] = labelrange([cost], >0)
+[instants] = labelrange([cost], 0)
+[startingSchemes] = labelrange([cost], -1)
+
+
+
+;BASIC ACTIONS
+
+[ACTION_HEADER_TALK] = Actions/TalkHeader.png
+[ACTION_HEADER_WOOD] = Actions/WoodHeader.png
+[ACTION_HEADER_FOOD] = Actions/FoodHeader.png
+
+[ACTION_ICON_TALK] = Actions/TALK.png
+[ACTION_ICON_WOOD] = Actions/WOOD.png
+[ACTION_ICON_FOOD] = Actions/FOOD.png
+[ACTION_ICON_AMBUSH] = Actions/AMBUSH.png
+
+
+;ACTION SYMBOLS
+[SCHEME] = Actions/SCHEME.png
+[EXHAUST] = Actions/EXHAUST.png
+[KILL] = Actions/KILL.png
+[STEAL] = Actions/STEAL.png
+[RECRUIT] = Actions/RECRUIT.png
+
+
+
+[TALK] = Actions/TALK.png
+[WOOD] = Actions/WOOD.png
+[FOOD] = Actions/FOOD.png
+[AMBUSH] = Actions/AMBUSH.png
+
+
+[VOTE1] = rewards/VOTE1.png
+[VOTE2] = rewards/VOTE2.png
+[VOTE3] = rewards/VOTE3.png
+[INLFUENCE] = rewards/INLFUENCE.png
+
+;RESOURCES
+
+[r1_wood] = resources/r1_wood.png
+[r2_wood] = resources/r2_wood.png
+[r3_wood] = resources/r3_wood.png
+[r4_wood] = resources/r4_wood.png
+[r5_wood] = resources/r5_wood.png
+[r6_wood] = resources/r6_wood.png
+[r7_wood] = resources/r7_wood.png
+[rX_wood] = resources/rX_wood.png
+
+
+[r1_food] = resources/r1_food.png
+[r2_food] = resources/r2_food.png
+[r3_food] = resources/r3_food.png
+[r4_food] = resources/r4_food.png
+[r5_food] = resources/r5_food.png
+[r6_food] = resources/r6_food.png
+[r7_food] = resources/r7_food.png
+[rX_food] = resources/rX_food.png
+
+;costs
+[cst_r1_wood] = resources/cst_r1_wood.png
+[cst_r2_wood] = resources/cst_r2_wood.png
+[cst_r3_wood] = resources/cst_r3_wood.png
+[cst_r4_wood] = resources/cst_r4_wood.png
+[cst_r5_wood] = resources/cst_r5_wood.png
+[cst_r6_wood] = resources/cst_r6_wood.png
+[cst_r7_wood] = resources/cst_r7_wood.png
+[cst_rX_wood] = resources/cst_rX_wood.png
+
+
+[cst_r1_food] = resources/cst_r1_food.png
+[cst_r2_food] = resources/cst_r2_food.png
+[cst_r3_food] = resources/cst_r3_food.png
+[cst_r4_food] = resources/cst_r4_food.png
+[cst_r5_food] = resources/cst_r5_food.png
+[cst_r6_food] = resources/cst_r6_food.png
+[cst_r7_food] = resources/cst_r7_food.png
+[cst_rX_food] = resources/cst_rX_food.png
+
+[cst_exhaust] = resources/CST_EXHAUST.png
+
+
+;header
+
+[EVENT_SCHEME_ICON] = Actions/INSTANT.png
+[PERMANENT_SCHEME_ICON] = UI/WoodSymbol.png
+
+
+
+VISUAL=HV, 10, 10
+;HeaderBackground
+IMAGE=[all],[ACTION_HEADER_[MetaType]],0%,0%,100%,{29300/1370}%
+;title font
+FONT=Arial,12,BT,#FFFFFF
+TEXT=[all],[TITLE],{25200/1005}%,{10000/1370}%,{50600/1005}%,{17300/1370}%
+;'Comment the lines below before uploading
+;CutLine(locked)
+RECTANGLE=[all],{4800/1005}%,{5100/1370}%,{91000/1005}%,{126500/1370}%,#FF0000,empty,0.01
+;SafeLine(locked)
+RECTANGLE=[all],{9500/1005}%,7.08%,{81400/1005}%,{117400/1370}%,#0000FF,empty,0.01
+;instant symbol
+IMAGE=[instants],[EVENT_SCHEME_ICON],{74900/1005}%,{11000/1370}%,{15000/1005}%,{14500/1370}%,0,PT
+;permanent cost symbol
+IMAGE=[permanents],[PERMANENT_SCHEME_ICON],{70000/1005}%,{10100/1370}%,20%,{16200/1370}%,0,PT
+;cost font
+FONT=Arial,20,BT,#FFFFFF
+;cost value
+TEXT=[permanents],[COST],{70500/1005}%,{12200/1370}%,{19500/1005}%,9.27%,CENTER,CENTER
+;trigger background
+IMAGE=,UI/triggerPlace.png,{-22500/1005}%,{73800/1370}%,{63600/1005}%,{20700/1370}%,90,p
+;trigger 1
+IMAGE=,,{10400/1005}%,{77500/1370}%,{12800/1005}%,{12900/1370}%,0,TP
+;trigger 2
+IMAGE=,,{24000/1005}%,{77700/1370}%,{12800/1005}%,{12800/1370}%,0,TP
+;scoredFinalRewardPlace(locked)
+IMAGE=[all],UI/rewardPlace.png,{-35100/1005}%,{109200/1370}%,{63600/1005}%,{20700/1370}%,90,p
+;ScoreFinalReward
+IMAGE=[all],[[scoredReward]],{10200/1005}%,{112900/1370}%,{12800/1005}%,{12900/1370}%,0,TP
+RECTANGLE=,{41200/1005}%,{82100/1370}%,{48700/1005}%,{43800/1370}%,#E8E8E8,EMPTY,0.01
+;Card text Font
+FONT=Arial,10,T,#000000
+;Card Text
+TEXT=[all],[text],{42100/1005}%,{82700/1370}%,{47100/1005}%,{43700/1370}%,LEFT,WORDWRAP
+;Action Type
+IMAGE=[all],[[headerSymbol]],{9900/1005}%,{10200/1370}%,{18300/1005}%,{18300/1370}%,0,T
+ENDVISUAL
+
+
+;reward 1
+
+IF= [gainSymbol_I]<>""
+
+    ;Background
+    IMAGE=[all],UI/rewardPlace.png,{-24600/1005}%,{31100/1370}%,{48400/1005}%,{14600/1370}%,90,p
+
+    IMAGE=[all],[[gainSymbol_I]],{9700/1005}%,22.19%,{13400/1005}%,{16100/1370}%,0,TP
+
+ ;   IMAGE=[all],UI/rewardPlace.png,{-24500/1005}%,{31100/1370}%,{48400/1005}%,{14600/1370}%,90,p
+;    IMAGE=[all],[[gainSymbol_I]],{9900/1005}%,{31900/1370}%,{12800/1005}%,{12800/1370}%,0,TP
+
+ENDIF
+
+
+IF= [gainSymbol_II]<>""
+
+    ;Background
+    IMAGE=[all],UI/rewardPlace.png,-24.08%,{45800/1370}%,{48500/1005}%,{14600/1370}%,90,p
+
+    IMAGE=[all],[[gainSymbol_II]],{10500/1005}%,{46800/1370}%,{12800/1005}%,{12800/1370}%,0,TP
+ENDIF
+
+
+IF= [gainSymbol_III]<>""
+
+    ;Background
+    IMAGE=[all],UI/rewardPlace.png,{-24400/1005}%,{60300/1370}%,{48500/1005}%,{14600/1370}%,90,p
+
+    IMAGE=[all],[[gainSymbol_III]],{10400/1005}%,{61300/1370}%,{12800/1005}%,{12800/1370}%,0,TP
+ENDIF
+
+
+
+IF= [triggerSymbol_I]<>""
+
+    ;trigger 1
+    IMAGE=[all],[[triggerSymbol_I]],{10400/1005}%,{77500/1370}%,{12800/1005}%,{12900/1370}%,0,TP
+
+ENDIF
+
+IF= [triggerSymbol_II]<>""
+
+    ;trigger 1
+    IMAGE=[all],[[triggerSymbol_II]],{24000/1005}%,{77700/1370}%,{12800/1005}%,{12800/1370}%,0,TP
+
+ENDIF
+
+
+
+IF= [triggerGain_I]<>""
+
+    ;triggerReward1Place
+    IMAGE=[all],UI/rewardPlace.png,{-22500/1005}%,{92400/1370}%,{63600/1005}%,{20700/1370}%,90,p
+    ;triggerReward
+    IMAGE=[all],[[triggerGain_I]],{10400/1005}%,{96200/1370}%,{12800/1005}%,{12900/1370}%,0,TP
+
+    IF= [triggerGain_II]<>""
+
+        ;triggerReward2
+        IMAGE=[all],[[triggerGain_II]],{23900/1005}%,{96200/1370}%,{12800/1005}%,{12900/1370}%,0,TP
+
+    ENDIF
+
+ENDIF
+
+
+
+
+
+

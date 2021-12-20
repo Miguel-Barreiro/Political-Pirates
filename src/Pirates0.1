@@ -1,0 +1,72 @@
+LINK = "1CgnPUToxSFXxc0uPesLQcTMyhkYP0UI0vecR8J13Syw"
+
+'###################################
+'Micro cards 1.25 x 1.75 - 450 x 600
+'###################################
+UNIT=INCH
+CARDSIZE=1.5,2
+BORDER=NONE
+DPI=300
+
+[all]=1-{(card)}
+
+
+DISPLAY=output/PiratesTTS.png,1,0,10
+
+
+
+;DEFINITIONS
+
+[COLOR_BLUE]=#0c00ff
+[COLOR_BLACK]=#343434
+[COLOR_RED]=#ca2222
+[COLOR_GREEN]=#2f7e0f
+[COLOR_YELLOW]=#e0a903
+[COLOR_WILD]=#8606bc
+[COLOR_NEUTRAL]=#FFFFFF
+
+
+
+;rewards
+[1I] = rewards/1I.png
+[2I] = rewards/2I.png
+
+[VOTE1] = rewards/VOTE1.png
+[VOTE2] = rewards/VOTE2.png
+[VOTE3] = rewards/VOTE3.png
+
+;ACTION SYMBOLS
+[SCHEME] = Actions/SCHEME.png
+[EXHAUST] = Actions/EXHAUST.png
+[KILL] = Actions/KILL.png
+[STEAL] = Actions/STEAL.png
+
+
+;VISUALS
+
+VISUAL=HV, 10, 10
+;background color
+RECTANGLE=[all],0%,0%,100%,100%,[COLOR_[Faction]]
+;background image
+IMAGE=[all],UI/pirateBackground.png,{200/1028}%,{25800/1370}%,100%,{105300/1370}%,0,TP
+;food icon
+IMAGE=[all],foodIcon.png,{19000/1028}%,{35600/1370}%,{71000/1028}%,{42200/1370}%,0,PT
+;cost Font
+FONT=Arial,30,BT,#F8F8FF
+;COST
+TEXT=[all],[COST],{25800/1028}%,{46800/1370}%,{47500/1028}%,{20500/1370}%
+;number Font
+FONT=Arial,10,BT,#000000,#FFFFFF,0,0
+TEXT=[all],[CARD],{90000/1028}%,{129000/1370}%,{12800/1028}%,{8000/1370}%
+ENDVISUAL
+;BORDER
+
+;reward
+IF= [reward]<>""
+    IMAGE=,[[reward]],0%,{8200/1370}%,100%,{23300/1370}%,0,PT
+ENDIF
+
+;ability
+IF= [ability]<>""
+    IMAGE=,[[ability]],0%,{109100/1370}%,100%,{23300/1370}%,0,PT
+ENDIF
