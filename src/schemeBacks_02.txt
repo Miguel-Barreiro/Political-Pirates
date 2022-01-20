@@ -1,0 +1,40 @@
+'#########################################
+'Euro-poker cards 2.48 x 3.46 - 825 x 1125
+'#########################################
+UNIT=INCH
+Page = 8.5, 11,PORTRAIT,HV
+CARDSIZE=2.75,3.75
+BORDER=NONE
+DPI=300
+
+LINKMULTI = copies
+LINK = "11LYC3lbaSMvkLHemIek4mjIKlUnKl6BtS7dmP3hFU9o"
+
+
+DISPLAY=output/SchemesTTS.png,1,0,10
+
+
+
+BASERANGE = [all], ON
+
+[all]=1-{(id)}
+
+
+;BASIC ACTIONS
+
+[TALK] = "Akvile/0.2/backs/TalkBack.png"
+[TALK_AMBUSH] = "Akvile/0.2/backs/TalkBack.png"
+
+[WOOD] = "Akvile/0.2/backs/WoodBack.png"
+[WOOD_TALK] = "Akvile/0.2/backs/WoodBack.png"
+[WOOD_AMBUSH] = "Akvile/0.2/backs/WoodBack.png"
+
+[FOOD] = "Akvile/0.2/backs/FoodBack.png"
+[FOOD_TALK] = "Akvile/0.2/backs/FoodBack.png"
+[FOOD_AMBUSH] = "Akvile/0.2/backs/FoodBack.png"
+
+
+
+VISUAL=HVG, 10, 10
+IMAGE=[all],[[SCHEME_TYPE]],0%,0%,100%,100%
+ENDVISUAL
