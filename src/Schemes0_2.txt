@@ -1,0 +1,282 @@
+'#########################################
+'Euro-poker cards 2.48 x 3.46 - 825 x 1125
+'#########################################
+UNIT=INCH
+Page = 8.5, 11,PORTRAIT,HV
+CARDSIZE=2.75,3.75
+BORDER=NONE
+DPI=300
+
+LINKMULTI = copies
+LINK = "11LYC3lbaSMvkLHemIek4mjIKlUnKl6BtS7dmP3hFU9o"
+
+
+
+DISPLAY=output/SchemesTTS.png,1,0,10
+
+
+
+
+BASERANGE = [all], ON
+
+[all]=1-{(id)}
+[permanents] = labelrange([IS_EVENT], "No")
+[instants] = labelrange([IS_EVENT], "Yes")
+[startingSchemes] = labelrange([WOOD_COST], -1)
+
+
+
+;BASIC ACTIONS
+
+[ACTION_FRAME_TALK] = "Akvile/0.2/frame-purple.png"
+[ACTION_FRAME_TALK_AMBUSH] = "Akvile/0.2/frame-purple.png"
+
+[ACTION_FRAME_WOOD] = "Akvile/0.2/frame-brown.png"
+[ACTION_FRAME_WOOD_TALK] = "Akvile/0.2/frame-brown.png"
+[ACTION_FRAME_WOOD_AMBUSH] = "Akvile/0.2/frame-brown.png"
+
+[ACTION_FRAME_FOOD] = "Akvile/0.2/frame-red.png"
+[ACTION_FRAME_FOOD_TALK] = "Akvile/0.2/frame-red.png"
+[ACTION_FRAME_FOOD_AMBUSH] = "Akvile/0.2/frame-red.png"
+
+
+
+
+[ACTION_ICON_TALK] = Actions/TALK.png
+[ACTION_ICON_TALK_AMBUSH] = Actions/AMBUSH.png
+
+[ACTION_ICON_WOOD] = Actions/WOOD.png
+[ACTION_ICON_WOOD_TALK] = Actions/TALK.png
+[ACTION_ICON_WOOD_AMBUSH] = Actions/AMBUSH.png
+
+[ACTION_ICON_FOOD] = Actions/FOOD.png
+[ACTION_ICON_FOOD_TALK] = Actions/TALK.png
+[ACTION_ICON_FOOD_AMBUSH] = Actions/AMBUSH.png
+
+
+
+;ACTION SYMBOLS
+
+
+
+
+
+;SCHEME SYMBOLS
+[WOOD.action] = Actions/WOOD.png
+[WOOD_TALK.action] = Actions/TALK.png
+[WOOD_AMBUSH.action] = Actions/AMBUSH.png
+[FOOD.action] = Actions/FOOD.png
+[FOOD_TALK.action] = Actions/TALK.png
+[FOOD_AMBUSH.action] = Actions/AMBUSH.png
+[TALK.action] = Actions/TALK.png
+[TALK_AMBUSH.action] = Actions/AMBUSH.png
+[AMBUSH.action] = Actions/AMBUSH.png
+
+
+;UI
+[GAIN_BACKGROUND] = "Akvile/0.2/gain.png"
+
+
+;ICONS
+
+[wood] = Akvile/0.2/Icons/WoodIcon.png
+[food] = Akvile/0.2/Icons/FoodIcon.png
+[maneuver] = Akvile/0.2/Icons/ManeuverIcon.png
+[vote] = Akvile/0.2/Icons/VoteIcon.png
+[draw] = Akvile/0.2/Icons/DrawIcon.png
+
+
+[promote] = Akvile/0.2/Icons/PromoteIcon.png
+[promote2] = Akvile/0.2/Icons/PromoteIcon.png
+[demote] = Akvile/0.2/Icons/DemoteIcon.png
+[pushout] = Akvile/0.2/Icons/PushoutIcon.png
+[pushout2] = Akvile/0.2/Icons/PushoutIcon.png
+[passive] = Akvile/0.2/Icons/PassiveIcon.png
+[recruit] = Akvile/0.2/Icons/RecruitIcon.png
+[recruit2] = Akvile/0.2/Icons/RecruitIcon.png
+[recruit-Free] = Akvile/0.2/Icons/RecruitFreetIcon.png
+[recruit-Free2] = Akvile/0.2/Icons/RecruitFreetIcon.png
+[execute] = Akvile/0.2/Icons/ExecuteIcon.png
+[execute2] = Akvile/0.2/Icons/ExecuteIcon.png
+[steal] = Akvile/0.2/Icons/StealIcon.png
+[utility] = Akvile/0.2/Icons/UtilityIcon.png
+
+[influence] = Akvile/0.2/Icons/InfluenceIcon.png
+
+
+;header
+
+[EVENT_SCHEME_ICON] = Actions/INSTANT.png
+[PERMANENT_SCHEME_ICON] = UI/WoodSymbol.png
+
+
+
+
+;GAINS
+[GAIN_1] = TOKENIZESEQ([GAIN], 1, #)
+[GAIN_2] = TOKENIZESEQ([GAIN], 2, #)
+[GAIN_3] = TOKENIZESEQ([GAIN], 3, #)
+[gain1_cards]=RANGEREM([all], labelrange([GAIN_1], ""))
+[gain2_cards]=RANGEREM([all], labelrange([GAIN_2], ""))
+[gain3_cards]=RANGEREM([all], labelrange([GAIN_3], ""))
+
+[GAIN_1_TYPE]=TOKENIZESEQ([GAIN_1], 1, _)
+[GAIN_1_NUMBER]=TOKENIZESEQ([GAIN_1], 2, _)
+[GAIN_2_TYPE]=TOKENIZESEQ([GAIN_2], 1, _)
+[GAIN_2_NUMBER]=TOKENIZESEQ([GAIN_2], 2, _)
+[GAIN_3_TYPE]=TOKENIZESEQ([GAIN_3], 1, _)
+[GAIN_3_NUMBER]=TOKENIZESEQ([GAIN_3], 2, _)
+
+[gain1_number_cards]=RANGEREM([all], labelrange([GAIN_1_NUMBER], ""))
+[gain2_number_cards]=RANGEREM([all], labelrange([GAIN_2_NUMBER], ""))
+[gain3_number_cards]=RANGEREM([all], labelrange([GAIN_3_NUMBER], ""))
+
+
+;TRIGGERS
+
+[TRIGGER_1]=TOKENIZESEQ([TRIGGER], 1, #)
+[TRIGGER_2]=TOKENIZESEQ([TRIGGER], 2, #)
+[trigger1_cards]=RANGEREM([all], labelrange([TRIGGER_1], ""))
+[trigger2_cards]=RANGEREM([all], labelrange([TRIGGER_2], ""))
+
+
+;SUPER GAIN
+
+[SUPER_GAIN_1]=TOKENIZESEQ([SUPER_GAIN], 1, #)
+[SUPER_GAIN_2]=TOKENIZESEQ([SUPER_GAIN], 2, #)
+[super_gain1_cards]=RANGEREM([all], labelrange([SUPER_GAIN_1], ""))
+[super_gain2_cards]=RANGEREM([all], labelrange([SUPER_GAIN_2], ""))
+
+[SUPER_GAIN_1_TYPE]=TOKENIZESEQ([SUPER_GAIN_1], 1, _)
+[SUPER_GAIN_1_NUMBER]=TOKENIZESEQ([SUPER_GAIN_1], 2, _)
+[SUPER_GAIN_2_TYPE]=TOKENIZESEQ([SUPER_GAIN_2], 1, _)
+[SUPER_GAIN_2_NUMBER]=TOKENIZESEQ([SUPER_GAIN_2], 2, _)
+
+[super_gain1_number_cards]=RANGEREM([all], labelrange([SUPER_GAIN_1_NUMBER], ""))
+[super_gain2_number_cards]=RANGEREM([all], labelrange([SUPER_GAIN_2_NUMBER], ""))
+
+;REQUIREMENTS
+
+[REQUIREMENTS_1]=TOKENIZESEQ([REQUIREMENTS], 1, #)
+[REQUIREMENTS_2]=TOKENIZESEQ([REQUIREMENTS], 2, #)
+[requirements1_cards]=RANGEREM([all], labelrange([REQUIREMENTS_1], ""))
+[requirements2_cards]=RANGEREM([all], labelrange([REQUIREMENTS_2], ""))
+
+[REQUIREMENTS_1_TYPE]=TOKENIZESEQ([REQUIREMENTS_1], 1, _)
+[REQUIREMENTS_1_NUMBER]=TOKENIZESEQ([REQUIREMENTS_1], 2, _)
+[REQUIREMENTS_2_TYPE]=TOKENIZESEQ([REQUIREMENTS_2], 1, _)
+[REQUIREMENTS_2_NUMBER]=TOKENIZESEQ([REQUIREMENTS_2], 2, _)
+
+[requirements1_number_cards]=RANGEREM([all], labelrange([REQUIREMENTS_1_NUMBER], ""))
+[requirements2_number_cards]=RANGEREM([all], labelrange([REQUIREMENTS_2_NUMBER], ""))
+
+
+;VOTES
+[SCORE_TYPE]=TOKENIZESEQ([SCORE], 1, _)
+[SCORE_NUMBER]=TOKENIZESEQ([SCORE], 2, _)
+[score_cards]=RANGEREM([all], labelrange([SCORE], ""))
+
+
+
+VISUAL=HVG, 10, 10
+;Frame
+IMAGE=[all],[ACTION_FRAME_[SCHEME_TYPE]],{7400/763}%,{7300/1040}%,{61500/763}%,{88900/1040}%,0,N
+;[all]FrameTEST
+;IMAGE=,Akvile/0.2/frame-red.png,{5700/598}%,{5700/815}%,{48200/598}%,{69800/815}%
+;title font(locked)
+FONT=Trajan Pro 3,10,BT,#000000,#000000
+;name
+TEXT=[all],[NAME],{9100/763}%,{20900/1040}%,{57200/763}%,{4700/1040}%,CENTER
+;CutLine(locked)
+RECTANGLE=[all],{3700/763}%,{3800/1040}%,{69000/763}%,{96000/1040}%,#FF0000,empty,0.01
+;SafeLine(locked)
+RECTANGLE=[all],{7300/763}%,{7300/1040}%,{61500/763}%,{88900/1040}%,#0000FF,empty,0.01
+;Action Type
+IMAGE=,[ACTION_ICON_[SCHEME_TYPE]],{53100/763}%,{8000/1040}%,19.79%,{12200/1040}%,0,PN
+;[TALK_AMBUSH]IMAGE=,,{42600/598}%,{5800/815}%,19.9%,{9900/815}%,0,TP
+;instant symbol
+IMAGE=[instants],[EVENT_SCHEME_ICON],{46400/763}%,{8800/1040}%,{6400/763}%,{8000/1040}%,0,PN
+;[req2]requirements2 background
+IMAGE=[requirements2_cards],Akvile/0.2/requirementBackground.png,{26700/763}%,{10500/1040}%,{8000/763}%,6.25%,0,NP
+;[req1]requirements1 background
+IMAGE=[requirements1_cards],Akvile/0.2/requirementBackground.png,{19300/763}%,{10500/1040}%,{8400/763}%,6.25%,0,NP
+;[req1]requirements1
+IMAGE=[requirements1_cards],[[REQUIREMENTS_1_TYPE].action],{19300/763}%,{10500/1040}%,{8400/763}%,6.25%,0,NP
+;[req1]requirements1 number background
+IMAGE=[requirements1_cards],Akvile/0.2/blue-number.png,{24000/763}%,{15000/1040}%,{5600/763}%,{5500/1040}%,0,NP
+;[req1]requirement 1 number
+TEXT=[requirements1_cards],[REQUIREMENTS_1_NUMBER],32.11%,{15100/1040}%,{4800/763}%,{5100/1040}%
+;[req2]requirements2
+IMAGE=[requirements2_cards],[[REQUIREMENTS_2_TYPE].action],{26700/763}%,{10500/1040}%,{8000/763}%,6.25%,0,NP
+;[req2]requirements2 number background
+IMAGE=[requirements2_cards],Akvile/0.2/blue-number.png,{31900/763}%,{14800/1040}%,{5300/763}%,{5000/1040}%,0,NP
+;[req2]requirement 2 number
+TEXT=[requirements2_cards],[REQUIREMENTS_2_NUMBER],{32100/763}%,{15000/1040}%,{4800/763}%,{5100/1040}%
+;permanent cost symbol
+IMAGE=[all],Akvile/0.2/Cost.png,{7300/763}%,{7400/1040}%,{12500/763}%,{12700/1040}%,0,PN
+;cost font
+FONT=Arial,15,TB,#000000
+;cost value
+TEXT=[all],[WOOD_COST],{10600/763}%,{14100/1040}%,{6300/763}%,{4700/1040}%,CENTER,CENTER
+;Gain font
+FONT=Arial,13,TB,#000000
+;[gain1]gain1 background
+IMAGE=[gain1_cards],Akvile/0.2/gain.png,{7100/763}%,{30500/1040}%,{19100/763}%,{9400/1040}%,0,N
+;[gain1]gain 1 symbol
+IMAGE=[gain1_cards],[[GAIN_1_TYPE]],11.14%,{31000/1040}%,{8700/763}%,{8000/1040}%,0,NP
+;[gain1]gain1 number background
+IMAGE=[gain1_number_cards],Akvile/0.2/blue-number.png,{18400/763}%,30%,{7200/763}%,{7600/1040}%,0,NP
+;[gain1]gain 1 value
+TEXT=[gain1_number_cards],[GAIN_1_NUMBER],24.64%,{32600/1040}%,{6300/763}%,{4700/1040}%,CENTER,CENTER
+;[gain2]gain2 background
+IMAGE=[gain2_cards],Akvile/0.2/gain.png,{7100/763}%,{41000/1040}%,{19100/763}%,{9200/1040}%,0,N
+;[gain2]gain2 symbol
+IMAGE=[gain2_cards],[[GAIN_2_TYPE]],11.14%,40%,{8700/763}%,{8000/1040}%,0,TP
+;[gain2]gain2 number background
+IMAGE=[gain2_number_cards],Akvile/0.2/blue-number.png,{18400/763}%,{41700/1040}%,{7200/763}%,{7600/1040}%,0,NP
+;[gain2]gain2 value
+TEXT=[gain2_number_cards],[GAIN_2_NUMBER],24.64%,{43200/1040}%,{6300/763}%,{4700/1040}%,CENTER,CENTER
+;[gain3]gain3 background
+IMAGE=[gain3_cards],Akvile/0.2/gain.png,{7000/763}%,{50500/1040}%,{19100/763}%,{9300/1040}%,0,N
+;[gain3]gain3 symbol
+IMAGE=[gain3_cards],[[GAIN_3_TYPE]],{8400/763}%,{50900/1040}%,{8900/763}%,{7900/1040}%,0,NP
+;gain3 number background
+IMAGE=[gain3_number_cards],Akvile/0.2/blue-number.png,{18300/763}%,{51200/1040}%,{7200/763}%,{7600/1040}%,0,NP
+;gain2 value
+TEXT=[gain2_number_cards],[GAIN_3_NUMBER],24.64%,{52900/1040}%,{6300/763}%,{4700/1040}%,CENTER,CENTER
+;[super]Supergain background
+IMAGE=[super_gain1_cards],Akvile/0.2/action-one.png,{5900/763}%,{63400/1040}%,35.78%,{14800/1040}%,0,NP
+;[super]trigger1
+IMAGE=[trigger1_cards],[[TRIGGER_1]],{8400/763}%,{65800/1040}%,{9000/763}%,{10000/1040}%,0,NP
+;[super]trigger 2
+IMAGE=[trigger2_cards],[[TRIGGER_2]],{20500/763}%,{65800/1040}%,11.14%,{9900/1040}%,0,NP
+;[supergain1]super gain 1 background
+IMAGE=[super_gain1_cards],Akvile/0.2/gain.png,{7300/763}%,{77400/1040}%,{19100/763}%,{9400/1040}%,0,N
+;[supergain1]Supergain1
+IMAGE=[super_gain1_cards],[[SUPER_GAIN_1_TYPE]],{8800/763}%,{78400/1040}%,{8600/763}%,{8000/1040}%,0,NP
+;[supergain1]supergain1 number background
+IMAGE=[super_gain1_number_cards],Akvile/0.2/blue-number.png,{18400/763}%,{78400/1040}%,{7200/763}%,{7600/1040}%,0,NP
+;[supergain1]supergain 1 value
+TEXT=[super_gain1_number_cards],[SUPER_GAIN_1_NUMBER],{18900/763}%,{80000/1040}%,{6100/763}%,{4800/1040}%,CENTER,CENTER
+;[supergain2]super gain 2 background
+IMAGE=[super_gain2_cards],Akvile/0.2/gain.png,{7100/763}%,{86700/1040}%,{19100/763}%,{9200/1040}%,0,N
+;[supergain2]Supergain2
+IMAGE=[super_gain2_cards],[[SUPER_GAIN_2_TYPE]],{9000/763}%,{87300/1040}%,{8200/763}%,{8000/1040}%,0,NP
+;[supergain2]supergain1 number background
+IMAGE=[super_gain2_number_cards],Akvile/0.2/blue-number.png,{18400/763}%,{87600/1040}%,{7200/763}%,{7500/1040}%,0,NP
+;[supergain2]supergain 1 value
+TEXT=[super_gain2_number_cards],[SUPER_GAIN_2_NUMBER],24.64%,{88900/1040}%,{6300/763}%,{4700/1040}%,CENTER,CENTER
+;Card text Font
+FONT=Arial,10,T,#000000
+;[text]Card Text
+TEXT=[all],[CARD_TEXT],{27700/763}%,{76600/1040}%,{40200/763}%,{19100/1040}%,LEFT,WORDWRAP
+;[score]Score font
+FONT=Arial,12,TB,#000000
+;[score]score background
+IMAGE=[score_cards],Akvile/0.2/votes.png,{58000/763}%,{66000/1040}%,{10900/763}%,{10500/1040}%,0,PN
+;[score]score value
+TEXT=[score_cards],[SCORE_NUMBER],{59700/763}%,{68200/1040}%,{7300/763}%,{8800/1040}%,CENTER,CENTER
+HTMLMARGINS=FontName,0,0,0,0
+ENDVISUAL
+
+
