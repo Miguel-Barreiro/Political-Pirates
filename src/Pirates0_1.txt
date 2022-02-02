@@ -1,0 +1,118 @@
+LINK = "1o2YvzTJOnhEuTjyIrVbrSYzrA8pKRIVoD5PNn-ZlU8M"
+
+'###################################
+'Micro cards 1.25 x 1.75 - 450 x 600
+'###################################
+UNIT=INCH
+CARDSIZE=1.5,2
+BORDER=NONE
+DPI=300
+
+[all]=1-{(id)}
+
+BASERANGE = [all], ON
+
+DISPLAY=output/PiratesTTS.png,1,0,10
+
+
+
+;DEFINITIONS
+
+[COLOR_Blue]=#0c00ff
+[COLOR_Black]=#343434
+[COLOR_Red]=#ca2222
+[COLOR_Green]=#2f7e0f
+[COLOR_Yellow]=#e0a903
+[COLOR_Wild]=#8606bc
+
+;ICONS
+
+[wood] = Akvile/0.2/Icons/WoodIcon.png
+[food] = Akvile/0.2/Icons/FoodIcon.png
+[maneuver] = Akvile/0.2/Icons/ManeuverIcon.png
+[vote] = Akvile/0.2/Icons/VoteIcon.png
+[draw] = Akvile/0.2/Icons/DrawIcon.png
+
+
+[promote] = Akvile/0.2/Icons/PromoteIcon.png
+[promote2] = Akvile/0.2/Icons/PromoteIcon.png
+[demote] = Akvile/0.2/Icons/DemoteIcon.png
+[pushout] = Akvile/0.2/Icons/PushoutIcon.png
+[pushout2] = Akvile/0.2/Icons/PushoutIcon.png
+[passive] = Akvile/0.2/Icons/PassiveIcon.png
+[recruit] = Akvile/0.2/Icons/RecruitIcon.png
+[recruit2] = Akvile/0.2/Icons/RecruitIcon.png
+[recruit-Free] = Akvile/0.2/Icons/RecruitFreetIcon.png
+[recruit-Free2] = Akvile/0.2/Icons/RecruitFreetIcon.png
+[execute] = Akvile/0.2/Icons/ExecuteIcon.png
+[execute2] = Akvile/0.2/Icons/ExecuteIcon.png
+[steal] = Akvile/0.2/Icons/StealIcon.png
+[utility] = Akvile/0.2/Icons/UtilityIcon.png
+
+[influence] = Akvile/0.2/Icons/InfluenceIcon.png
+
+
+;BACK INFLUENCE
+[Black_1]= rewards/BLACK1.png
+[Black_2]= rewards/BLACK2.png
+[Blue_1]= rewards/BLUE1.png
+[Blue_2]= rewards/BLUE2.png
+[Red_1]= rewards/RED1.png
+[Red_2]= rewards/RED2.png
+[Wild_1]= rewards/WILD1.png
+[Wild_2]= rewards/WILD2.png
+[Yellow_1]= rewards/YELLOW1.png
+[Yellow_2]= rewards/YELLOW2.png
+[Green_1]= rewards/GREEN1.png
+[Green_2]= rewards/GREEN2.png
+
+
+;rewards
+[I1] = rewards/1I.png
+[I2] = rewards/2I.png
+
+[VOTE1] = rewards/VOTE1.png
+[VOTE2] = rewards/VOTE2.png
+[VOTE3] = rewards/VOTE3.png
+
+[COST_TYPE]=TOKENIZESEQ([COST], 1, _)
+[COST_VALUE]=TOKENIZESEQ([COST], 2, _)
+
+
+[FACTION_TYPE]=TOKENIZESEQ([FACTION], 1, _)
+[FACTION_NUMBER]=TOKENIZESEQ([FACTION], 2, _)
+
+
+[SKILL_TYPE]=TOKENIZESEQ([SKILL], 1, _)
+[SKILL_NUMBER]=TOKENIZESEQ([SKILL], 2, _)
+[skill_number_cards]=RANGEREM([all], labelrange([SKILL_NUMBER], ""))
+
+;VISUALS
+
+VISUAL=HV, 10, 10
+;background color
+RECTANGLE=[all],0%,0%,100%,100%,[COLOR_[FACTION_TYPE]]
+;[PIRATE]background image
+IMAGE=[all],UI/pirateBackground.png,0%,{23100/1120}%,100%,70%,0,TP
+;influence
+IMAGE=[all],[I[FACTION_NUMBER]],{13100/840}%,{1300/1120}%,{58100/840}%,{30200/1120}%,0,PT
+;[PIRATE]food icon
+IMAGE=[all],Akvile/0.2/icons/FoodIcon.png,{8200/840}%,{28900/1120}%,{71300/840}%,{35100/1120}%,0,PT
+;cost Font
+FONT=Consolas,40,BT,#F8F8FF
+;[PIRATE]COST
+TEXT=[all],[COST_VALUE],{20000/840}%,{34200/1120}%,{38800/840}%,{24100/1120}%
+;point icon
+;IMAGE=[all],rewards/VOTE1.png,{56200/840}%,{58600/1120}%,{28400/840}%,{17500/1120}%,0,PT
+;reward
+IMAGE=[all],[[SKILL_TYPE]],{700/840}%,{76700/1120}%,{27400/840}%,{30400/1120}%,90,PT
+;[skill]value background
+IMAGE=[skill_number_cards],Akvile/0.2/blue-number.png,{16900/840}%,{89700/1120}%,{20200/840}%,{23700/1120}%,90,NP
+;number Font
+FONT=Arial,18,BT,#000000,#FFFFFF,0,0
+;[skill]skill value
+TEXT=[skill_number_cards],[SKILL_NUMBER],{17000/840}%,{90000/1120}%,{20000/840}%,{22600/1120}%
+ENDVISUAL
+;BORDER
+
+

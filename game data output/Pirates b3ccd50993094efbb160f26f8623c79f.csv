@@ -1,0 +1,9 @@
+﻿NAME,COST_NEUTRAL,COST,FACTION,FACTION_COLOR,SKILL,id
+,Food_1,Food_3,Green_1,Green,draw_1,025a48dc54c6448a88f0873808f0d9c3
+,Food_1,Food_4,Wild_1,Wild,draw_1,ce06d4a3baad4e60858ff5aee0011c11
+,Food_1,Food_3,Yellow_1,Yellow,promote,ebb2c5b038264993983e86253eddbba7
+,Food_1,Food_3,Blue_1,Blue,draw_1,1c61816fecf34bdc921fae89f90854ab
+,Food_1,Food_3,Black_1,Black,promote,c989a5afa74d48c7929b30ae09e5957f
+Basic,Food_1,Food_3,Red_1,Red,promote,9d11f392f92e4047b4fe4b93565d5758
+,Food_3,Food_3,Red_1,Red,draw_2,f538fdbe14bc4399bc33ddc79d032f0b
+,Food_4,Food_4,Blue_1,Blue,recruit,12843aef34b14fc5be2ace54cbc8eb24
