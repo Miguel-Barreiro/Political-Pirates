@@ -14,12 +14,13 @@ BASERANGE = [all], ON
 
 DISPLAY=output/PiratesTTS.png,1,0,10
 
+[instants] = labelrange([SKILL_INSTANT], "Yes")
 
 
 ;DEFINITIONS
 
 [COLOR_Blue]=#0c00ff
-[COLOR_Black]=#343434
+[COLOR_Black]=#909090
 [COLOR_Red]=#ca2222
 [COLOR_Green]=#2f7e0f
 [COLOR_Yellow]=#e0a903
@@ -48,6 +49,10 @@ DISPLAY=output/PiratesTTS.png,1,0,10
 [execute2] = Akvile/0.2/Icons/ExecuteIcon.png
 [steal] = Akvile/0.2/Icons/StealIcon.png
 [utility] = Akvile/0.2/Icons/UtilityIcon.png
+
+[foodBonus] = Akvile/0.2/Icons/FoodIcon.png
+[woodBonus] = Akvile/0.2/Icons/WoodIcon.png
+
 
 [influence] = Akvile/0.2/Icons/InfluenceIcon.png
 
@@ -86,12 +91,16 @@ DISPLAY=output/PiratesTTS.png,1,0,10
 [SKILL_TYPE]=TOKENIZESEQ([SKILL], 1, _)
 [SKILL_NUMBER]=TOKENIZESEQ([SKILL], 2, _)
 [skill_number_cards]=RANGEREM([all], labelrange([SKILL_NUMBER], ""))
+[skill_cards]=RANGEREM([all], labelrange([SKILL_TYPE], ""))
+
 
 ;VISUALS
 
 VISUAL=HV, 10, 10
 ;background color
 RECTANGLE=[all],0%,0%,100%,100%,[COLOR_[FACTION_TYPE]]
+;outline
+RECTANGLE=,0%,0%,100%,100%,#000000,[COLOR_[FACTION_TYPE]],0.01
 ;[PIRATE]background image
 IMAGE=[all],UI/pirateBackground.png,0%,{23100/1120}%,100%,70%,0,TP
 ;influence
@@ -102,16 +111,18 @@ IMAGE=[all],Akvile/0.2/icons/FoodIcon.png,{8200/840}%,{28900/1120}%,{71300/840}%
 FONT=Consolas,40,BT,#F8F8FF
 ;[PIRATE]COST
 TEXT=[all],[COST_VALUE],{20000/840}%,{34200/1120}%,{38800/840}%,{24100/1120}%
-;point icon
-;IMAGE=[all],rewards/VOTE1.png,{56200/840}%,{58600/1120}%,{28400/840}%,{17500/1120}%,0,PT
+;[all]point icon
+;IMAGE=,rewards/VOTE1.png,{56200/840}%,{58600/1120}%,{28400/840}%,{17500/1120}%,0,PT
 ;reward
-IMAGE=[all],[[SKILL_TYPE]],{700/840}%,{76700/1120}%,{27400/840}%,{30400/1120}%,90,PT
+IMAGE=[skill_cards],[[SKILL_TYPE]],{700/840}%,{76700/1120}%,{27400/840}%,{30400/1120}%,90,PT
 ;[skill]value background
-IMAGE=[skill_number_cards],Akvile/0.2/blue-number.png,{16900/840}%,{89700/1120}%,{20200/840}%,{23700/1120}%,90,NP
+IMAGE=[skill_number_cards],Akvile/0.2/blue-number.png,{17000/840}%,{89800/1120}%,{20200/840}%,{23500/1120}%,90,NP
 ;number Font
 FONT=Arial,18,BT,#000000,#FFFFFF,0,0
 ;[skill]skill value
 TEXT=[skill_number_cards],[SKILL_NUMBER],{17000/840}%,{90000/1120}%,{20000/840}%,{22600/1120}%
+;instant symbol
+IMAGE=[instants],Actions/INSTANT.png,{38600/840}%,{96700/1120}%,{10800/840}%,{14600/1120}%,0,PN
 ENDVISUAL
 ;BORDER
 

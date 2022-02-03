@@ -15,6 +15,7 @@ BASERANGE = [all], ON
 DISPLAY=output/NeutralPiratesTTS.png,1,0,10
 
 
+[instants] = labelrange([SKILL_INSTANT], "Yes")
 
 ;DEFINITIONS
 
@@ -59,6 +60,9 @@ DISPLAY=output/NeutralPiratesTTS.png,1,0,10
 [steal] = Akvile/0.2/Icons/StealIcon.png
 [utility] = Akvile/0.2/Icons/UtilityIcon.png
 
+[foodBonus] = Akvile/0.2/Icons/FoodIcon.png
+[woodBonus] = Akvile/0.2/Icons/WoodIcon.png
+
 [influence] = Akvile/0.2/Icons/InfluenceIcon.png
 
 
@@ -80,6 +84,8 @@ DISPLAY=output/NeutralPiratesTTS.png,1,0,10
 
 [SKILL_TYPE]=TOKENIZESEQ([SKILL], 1, _)
 [SKILL_NUMBER]=TOKENIZESEQ([SKILL], 2, _)
+
+[skill_cards]=RANGEREM([all], labelrange([SKILL_TYPE], ""))
 [skill_number_cards]=RANGEREM([all], labelrange([SKILL_NUMBER], ""))
 
 [FACTION_TYPE]=TOKENIZESEQ([FACTION], 1, _)
@@ -99,7 +105,7 @@ VISUAL=HV, 10, 10
 ;background image
 IMAGE=[all],UI/pirateBackground.png,{-1100/840}%,{39600/1120}%,100%,{86400/1120}%,0,TP
 ;[PIRATE]food icon
-IMAGE=[all],UI/foodIcon.png,{13300/840}%,{47800/1120}%,{58000/840}%,{34300/1120}%,0,PT
+IMAGE=[all],UI/foodIcon.png,{13300/840}%,{47800/1120}%,{58100/840}%,{34300/1120}%,0,PT
 ;cost Font
 FONT=Arial,30,BT,#F8F8FF
 ;[PIRATE]COST
@@ -107,13 +113,15 @@ TEXT=[all],[COST_VALUE],{20500/840}%,{57300/1120}%,{37700/840}%,15%
 ;front
 IMAGE=[all],[[FACTION]],{400/840}%,{79900/1120}%,{13300/840}%,{32100/1120}%,90,TP
 ;[skill]reward
-IMAGE=[all],[[SKILL_TYPE]],{-200/840}%,{4400/1120}%,100%,{30400/1120}%,0,PT
+IMAGE=[skill_cards],[[SKILL_TYPE]],{-200/840}%,{4500/1120}%,100%,{30200/1120}%,0,PT
 ;[skill]value background
-IMAGE=[skill_number_cards],Akvile/0.2/blue-number.png,{41100/840}%,{22700/1120}%,{20100/840}%,{23700/1120}%,0,NP
+IMAGE=[skill_number_cards],Akvile/0.2/blue-number.png,{41100/840}%,{22800/1120}%,{20200/840}%,{23700/1120}%,0,NP
 ;number Font
 FONT=Arial,18,BT,#000000,#FFFFFF,0,0
 ;[skill]skill value
-TEXT=[skill_number_cards],[SKILL_NUMBER],{41100/840}%,{22700/1120}%,{20700/840}%,{22800/1120}%
+TEXT=[skill_number_cards],[SKILL_NUMBER],{41100/840}%,{22800/1120}%,{20700/840}%,{22800/1120}%
+;instant symbol
+IMAGE=[instants],Actions/INSTANT.png,12.5%,{10600/1120}%,{11800/840}%,{22600/1120}%,0,PN
 ;point icon
 ;IMAGE=[all],rewards/VOTE1.png,{56200/840}%,{58600/1120}%,{28400/840}%,{17500/1120}%,0,PT
 ENDVISUAL

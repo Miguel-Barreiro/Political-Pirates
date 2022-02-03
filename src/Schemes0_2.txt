@@ -195,7 +195,7 @@ RECTANGLE=[all],{7300/763}%,{7300/1040}%,{61500/763}%,{88900/1040}%,#0000FF,empt
 IMAGE=,[ACTION_ICON_[SCHEME_TYPE]],{53100/763}%,{8000/1040}%,19.79%,{12200/1040}%,0,PN
 ;[TALK_AMBUSH]IMAGE=,,{42600/598}%,{5800/815}%,19.9%,{9900/815}%,0,TP
 ;instant symbol
-IMAGE=[instants],[EVENT_SCHEME_ICON],{46400/763}%,{8800/1040}%,{6400/763}%,{8000/1040}%,0,PN
+IMAGE=[instants],Actions/INSTANT.png,{46400/763}%,{8800/1040}%,{6400/763}%,{8000/1040}%,0,PN
 ;[req2]requirements2 background
 IMAGE=[requirements2_cards],Akvile/0.2/requirementBackground.png,{26700/763}%,{10500/1040}%,{8000/763}%,6.25%,0,NP
 ;[req1]requirements1 background
