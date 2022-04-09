@@ -1,0 +1,63 @@
+;GAINS
+[GAIN_1] = TOKENIZESEQ([GAIN], 1, #)
+[GAIN_2] = TOKENIZESEQ([GAIN], 2, #)
+[GAIN_3] = TOKENIZESEQ([GAIN], 3, #)
+[gain1_cards]=RANGEREM([all], labelrange([GAIN_1], ""))
+[gain2_cards]=RANGEREM([all], labelrange([GAIN_2], ""))
+[gain3_cards]=RANGEREM([all], labelrange([GAIN_3], ""))
+
+[GAIN_1_TYPE]=TOKENIZESEQ([GAIN_1], 1, _)
+[GAIN_1_NUMBER]=TOKENIZESEQ([GAIN_1], 2, _)
+[GAIN_2_TYPE]=TOKENIZESEQ([GAIN_2], 1, _)
+[GAIN_2_NUMBER]=TOKENIZESEQ([GAIN_2], 2, _)
+[GAIN_3_TYPE]=TOKENIZESEQ([GAIN_3], 1, _)
+[GAIN_3_NUMBER]=TOKENIZESEQ([GAIN_3], 2, _)
+
+[gain1_number_cards]=RANGEREM([all], labelrange([GAIN_1_NUMBER], ""))
+[gain2_number_cards]=RANGEREM([all], labelrange([GAIN_2_NUMBER], ""))
+[gain3_number_cards]=RANGEREM([all], labelrange([GAIN_3_NUMBER], ""))
+
+
+;TRIGGERS
+
+[TRIGGER_1]=TOKENIZESEQ([TRIGGER], 1, #)
+[TRIGGER_2]=TOKENIZESEQ([TRIGGER], 2, #)
+[trigger1_cards]=RANGEREM([all], labelrange([TRIGGER_1], ""))
+[trigger2_cards]=RANGEREM([all], labelrange([TRIGGER_2], ""))
+
+
+;SUPER GAIN
+
+[SUPER_GAIN_1]=TOKENIZESEQ([SUPER_GAIN], 1, #)
+[SUPER_GAIN_2]=TOKENIZESEQ([SUPER_GAIN], 2, #)
+[super_gain1_cards]=RANGEREM([all], labelrange([SUPER_GAIN_1], ""))
+[super_gain2_cards]=RANGEREM([all], labelrange([SUPER_GAIN_2], ""))
+
+[SUPER_GAIN_1_TYPE]=TOKENIZESEQ([SUPER_GAIN_1], 1, _)
+[SUPER_GAIN_1_NUMBER]=TOKENIZESEQ([SUPER_GAIN_1], 2, _)
+[SUPER_GAIN_2_TYPE]=TOKENIZESEQ([SUPER_GAIN_2], 1, _)
+[SUPER_GAIN_2_NUMBER]=TOKENIZESEQ([SUPER_GAIN_2], 2, _)
+
+[super_gain1_number_cards]=RANGEREM([all], labelrange([SUPER_GAIN_1_NUMBER], ""))
+[super_gain2_number_cards]=RANGEREM([all], labelrange([SUPER_GAIN_2_NUMBER], ""))
+
+;REQUIREMENTS
+
+[REQUIREMENTS_1]=TOKENIZESEQ([REQUIREMENTS], 1, #)
+[REQUIREMENTS_2]=TOKENIZESEQ([REQUIREMENTS], 2, #)
+[requirements1_cards]=RANGEREM([all], labelrange([REQUIREMENTS_1], ""))
+[requirements2_cards]=RANGEREM([all], labelrange([REQUIREMENTS_2], ""))
+
+[REQUIREMENTS_1_TYPE]=TOKENIZESEQ([REQUIREMENTS_1], 1, _)
+[REQUIREMENTS_1_NUMBER]=TOKENIZESEQ([REQUIREMENTS_1], 2, _)
+[REQUIREMENTS_2_TYPE]=TOKENIZESEQ([REQUIREMENTS_2], 1, _)
+[REQUIREMENTS_2_NUMBER]=TOKENIZESEQ([REQUIREMENTS_2], 2, _)
+
+[requirements1_number_cards]=RANGEREM([all], labelrange([REQUIREMENTS_1_NUMBER], ""))
+[requirements2_number_cards]=RANGEREM([all], labelrange([REQUIREMENTS_2_NUMBER], ""))
+
+
+;VOTES
+[SCORE_TYPE]=TOKENIZESEQ([SCORE], 1, _)
+[SCORE_NUMBER]=TOKENIZESEQ([SCORE], 2, _)
+[score_cards]=RANGEREM([all], labelrange([SCORE], ""))
