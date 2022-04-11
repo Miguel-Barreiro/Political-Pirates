@@ -21,7 +21,8 @@ IMAGE=[all],[ACTION_FRAME_[SCHEME_TYPE]],{7400/763}%,{7300/1040}%,{61500/763}%,{
 ;[all]FrameTEST
 ;IMAGE=,Akvile/0.2/frame-red.png,{5700/598}%,{5700/815}%,{48200/598}%,{69800/815}%
 ;title font(locked)
-FONT=Trajan Pro 3,10,BT,#000000,#000000
+FONT="MS Sans Serif",8,BI,#000000
+;FONT=,10,BT,#000000,#000000
 ;name
 TEXT=[all],[NAME],{9100/763}%,{20900/1040}%,{57200/763}%,{4700/1040}%,CENTER
 ;CutLine(locked)

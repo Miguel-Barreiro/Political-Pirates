@@ -1,0 +1,32 @@
+LINK = "11LYC3lbaSMvkLHemIek4mjIKlUnKl6BtS7dmP3hFU9o"
+
+INCLUDE outputInfo.txt
+
+BASERANGE = [all], ON
+
+[all]=1-{(id)}
+
+VISUAL=HVGP, 19, 27
+;Frame(locked)
+IMAGE=[all],Akvile/0.2/frame-brown.png,{100/19}%,{100/27}%,{1700/19}%,{2500/27}%,0,N
+;Action Type(locked)
+IMAGE=[all],Actions/TALK.png,{1300/19}%,{200/27}%,{400/19}%,{400/27}%,0,PN
+;instant symbol(locked)
+IMAGE=[all],Actions/INSTANT.png,{1500/19}%,{500/27}%,{200/19}%,{200/27}%,0,PN
+
+;permanent cost symbol
+IMAGE=[all],Akvile/0.2/Cost.png,{5200/543}%,{5800/815}%,16.39%,{9900/815}%,0,PN
+;cost font
+FONT=Arial,15,TB,#000000
+;cost value
+TEXT=[all],[WOOD_COST],{7500/543}%,{11000/815}%,{4500/543}%,4.54%,CENTER,CENTER
+
+;[req2]requirements2 background(locked)
+IMAGE=[all],Akvile/0.2/requirementBackground.png,{200/19}%,{600/27}%,{200/19}%,{200/27}%,0,NP
+;[req1]requirements1 background(locked)
+IMAGE=[all],Akvile/0.2/requirementBackground.png,{200/19}%,{400/27}%,{200/19}%,{200/27}%,0,NP
+;SafeLine(locked)
+RECTANGLE=[all],{200/19}%,{200/27}%,{1500/19}%,{2300/27}%,#0000FF,empty,0.01
+;CardLimits(locked)
+RECTANGLE=[all],{100/19}%,{100/27}%,{1700/19}%,{2500/27}%,#FF0000,empty,0.01
+ENDVISUAL
