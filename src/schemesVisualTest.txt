@@ -9,32 +9,40 @@ BASERANGE = [all], ON
 VISUAL=HVG, 19, 27
 ;Frame(locked)
 IMAGE=[all],Frame/foodFrame.png,{2600/491}%,{2700/736}%,{44000/491}%,{68200/736}%,0,N
-;Action Type(locked)
-IMAGE=[all],Actions/TALK.png,{33600/491}%,{5500/736}%,{10300/491}%,14.81%,0,PN
-;instant symbol(locked)
-IMAGE=[all],Actions/INSTANT.png,{38800/491}%,{13600/736}%,{5100/491}%,{5500/736}%,0,PN
-;permanent cost symbol
-IMAGE=[all],Akvile/0.2/Cost.png,{5200/491}%,{5500/736}%,{7800/491}%,{8200/736}%,0,PN
+;Image(locked)
+IMAGE=[all],Frame\imageFrame.png,{5200/491}%,{5500/736}%,{38700/491}%,{32700/736}%
+;[name]name Frame(locked)
+IMAGE=[all],Frame\nameFrame.png,{5200/491}%,{38200/736}%,{38700/491}%,{2800/736}%
+;[action]Action Type(locked)
+IMAGE=[all],Actions/TALK.png,{31000/491}%,{5500/736}%,{12900/491}%,{13600/736}%,0,PN
+;[action]instant symbol(locked)
+IMAGE=[all],Actions/INSTANT.png,{38800/491}%,{16300/736}%,{5100/491}%,{5500/736}%,0,PN
 ;cost font
-FONT=Arial,25,TB,#000059,#FFFFFF,1,1
-;cost value(locked)
-TEXT=[all],[WOOD_COST],{5200/491}%,{5500/736}%,{7800/491}%,{8200/736}%,CENTER,CENTER
+FONT=Calisto MT,16,TB,#00000F,#FFFFFF
+;[cost]permanent cost symbol
+IMAGE=[all],Akvile/0.2/Cost.png,{5200/491}%,{5500/736}%,{7800/491}%,{8200/736}%,0,PN
+;[cost]cost value(locked)
+TEXT=[all],99,{5400/491}%,{7200/736}%,{7800/491}%,{8200/736}%,CENTER,CENTER
 ;requirements font(locked)
 FONT=Arial,10,T,#000000
 ;[req1]requirements1 icon
-IMAGE=[all],Actions/TALK.png,{13600/491}%,{6000/736}%,{6400/491}%,{6200/736}%,0,NP
+IMAGE=[all],Actions/TALK.png,{13400/491}%,{5600/736}%,{5100/491}%,{5400/736}%,0,NP
 ;[req1]requirements1 background
-IMAGE=[all],Akvile/0.2/blue-number.png,{17000/491}%,{9900/736}%,{3300/491}%,{3300/736}%,0,NP
+IMAGE=[all],Akvile/0.2/blue-number.png,{16300/491}%,{9400/736}%,{2600/491}%,{2700/736}%,0,NP
 ;[req1]requirement1 number
-TEXT=[all],9,{17300/491}%,{10100/736}%,{2600/491}%,{3000/736}%
+TEXT=[all],1,{16400/491}%,{9500/736}%,{2500/491}%,{2700/736}%
 ;[req2]requirements2 icon
-IMAGE=[all],Actions/TALK.png,{20200/491}%,{6000/736}%,{6400/491}%,{6200/736}%,0,NP
+IMAGE=[all],Actions/TALK.png,38.9%,{5600/736}%,{5100/491}%,{5400/736}%,0,NP
 ;[req2]requirements2 background
-IMAGE=[all],Akvile/0.2/blue-number.png,{23600/491}%,{9900/736}%,{3300/491}%,{3300/736}%,0,NP
+IMAGE=[all],Akvile/0.2/blue-number.png,{22000/491}%,{9400/736}%,{2600/491}%,{2700/736}%,0,NP
 ;[req2]requirement2 number
-TEXT=[all],9,{23900/491}%,{10100/736}%,{2600/491}%,{3000/736}%
+TEXT=[all],2,45.01%,{9500/736}%,{2500/491}%,{2700/736}%
+;[super]superFrame(locked)
+IMAGE=1-6,Frame\superFrame.png,{5300/491}%,{54500/736}%,{38600/491}%,{13600/736}%
+;[gain]gain frame(locked)
+IMAGE=1-6,Frame\gainFrame.png,{5200/491}%,{40900/736}%,{38700/491}%,{13600/736}%
 ;SafeLine(locked)
 RECTANGLE=[all],{5200/491}%,{5500/736}%,{38700/491}%,85.19%,#0000FF,empty,0.01
 ;CardLimits(locked)
-RECTANGLE=[all],{2700/491}%,{2700/736}%,{44000/491}%,{68200/736}%,#FF0000,empty,0.01
+RECTANGLE=[all],{2600/491}%,{2700/736}%,{44000/491}%,{68200/736}%,#FF0000,empty,0.01
 ENDVISUAL
