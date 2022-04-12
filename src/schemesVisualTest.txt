@@ -41,8 +41,14 @@ TEXT=[all],2,45.01%,{9500/736}%,{2500/491}%,{2700/736}%
 IMAGE=1-6,Frame\superFrame.png,{5300/491}%,{54500/736}%,{38600/491}%,{13600/736}%
 ;[gain]gain frame(locked)
 IMAGE=1-6,Frame\gainFrame.png,{5200/491}%,{40900/736}%,{38700/491}%,{13600/736}%
+;[supergain2]Supergain2
+IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,38.9%,{57100/736}%,{8700/491}%,{9000/736}%,0,NPT
+;[trigger]trigger2(locked)
+IMAGE=[all],Actions/TALK.png,{9900/491}%,{61100/736}%,{7500/491}%,{7100/736}%,0,PN
+;[trigger]trigger1(locked)
+IMAGE=[all],Actions/TALK.png,{5000/491}%,{54600/736}%,{7800/491}%,{7100/736}%,0,PN
 ;SafeLine(locked)
 RECTANGLE=[all],{5200/491}%,{5500/736}%,{38700/491}%,85.19%,#0000FF,empty,0.01
 ;CardLimits(locked)
-RECTANGLE=[all],{2600/491}%,{2700/736}%,{44000/491}%,{68200/736}%,#FF0000,empty,0.01
+RECTANGLE=[all],{2700/491}%,{2800/736}%,{44000/491}%,{68200/736}%,#FF0000,empty,0.01
 ENDVISUAL
