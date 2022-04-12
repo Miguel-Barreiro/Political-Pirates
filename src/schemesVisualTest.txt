@@ -6,27 +6,35 @@ BASERANGE = [all], ON
 
 [all]=1-{(id)}
 
-VISUAL=HVGP, 19, 27
+VISUAL=HVG, 19, 27
 ;Frame(locked)
-IMAGE=[all],Akvile/0.2/frame-brown.png,{100/19}%,{100/27}%,{1700/19}%,{2500/27}%,0,N
+IMAGE=[all],Frame/foodFrame.png,{2600/491}%,{2700/736}%,{44000/491}%,{68200/736}%,0,N
 ;Action Type(locked)
-IMAGE=[all],Actions/TALK.png,{1300/19}%,{200/27}%,{400/19}%,{400/27}%,0,PN
+IMAGE=[all],Actions/TALK.png,{33600/491}%,{5500/736}%,{10300/491}%,14.81%,0,PN
 ;instant symbol(locked)
-IMAGE=[all],Actions/INSTANT.png,{1500/19}%,{500/27}%,{200/19}%,{200/27}%,0,PN
-
+IMAGE=[all],Actions/INSTANT.png,{38800/491}%,{13600/736}%,{5100/491}%,{5500/736}%,0,PN
 ;permanent cost symbol
-IMAGE=[all],Akvile/0.2/Cost.png,{5200/543}%,{5800/815}%,16.39%,{9900/815}%,0,PN
+IMAGE=[all],Akvile/0.2/Cost.png,{5200/491}%,{5500/736}%,{7800/491}%,{8200/736}%,0,PN
 ;cost font
-FONT=Arial,15,TB,#000000
-;cost value
-TEXT=[all],[WOOD_COST],{7500/543}%,{11000/815}%,{4500/543}%,4.54%,CENTER,CENTER
-
-;[req2]requirements2 background(locked)
-IMAGE=[all],Akvile/0.2/requirementBackground.png,{200/19}%,{600/27}%,{200/19}%,{200/27}%,0,NP
-;[req1]requirements1 background(locked)
-IMAGE=[all],Akvile/0.2/requirementBackground.png,{200/19}%,{400/27}%,{200/19}%,{200/27}%,0,NP
+FONT=Arial,25,TB,#000059,#FFFFFF,1,1
+;cost value(locked)
+TEXT=[all],[WOOD_COST],{5200/491}%,{5500/736}%,{7800/491}%,{8200/736}%,CENTER,CENTER
+;requirements font(locked)
+FONT=Arial,10,T,#000000
+;[req1]requirements1 icon
+IMAGE=[all],Actions/TALK.png,{13600/491}%,{6000/736}%,{6400/491}%,{6200/736}%,0,NP
+;[req1]requirements1 background
+IMAGE=[all],Akvile/0.2/blue-number.png,{17000/491}%,{9900/736}%,{3300/491}%,{3300/736}%,0,NP
+;[req1]requirement1 number
+TEXT=[all],9,{17300/491}%,{10100/736}%,{2600/491}%,{3000/736}%
+;[req2]requirements2 icon
+IMAGE=[all],Actions/TALK.png,{20200/491}%,{6000/736}%,{6400/491}%,{6200/736}%,0,NP
+;[req2]requirements2 background
+IMAGE=[all],Akvile/0.2/blue-number.png,{23600/491}%,{9900/736}%,{3300/491}%,{3300/736}%,0,NP
+;[req2]requirement2 number
+TEXT=[all],9,{23900/491}%,{10100/736}%,{2600/491}%,{3000/736}%
 ;SafeLine(locked)
-RECTANGLE=[all],{200/19}%,{200/27}%,{1500/19}%,{2300/27}%,#0000FF,empty,0.01
+RECTANGLE=[all],{5200/491}%,{5500/736}%,{38700/491}%,85.19%,#0000FF,empty,0.01
 ;CardLimits(locked)
-RECTANGLE=[all],{100/19}%,{100/27}%,{1700/19}%,{2500/27}%,#FF0000,empty,0.01
+RECTANGLE=[all],{2700/491}%,{2700/736}%,{44000/491}%,{68200/736}%,#FF0000,empty,0.01
 ENDVISUAL
