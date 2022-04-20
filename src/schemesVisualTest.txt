@@ -2,53 +2,90 @@ LINK = "11LYC3lbaSMvkLHemIek4mjIKlUnKl6BtS7dmP3hFU9o"
 
 INCLUDE outputInfo.txt
 
-BASERANGE = [all], ON
+
+LINKMULTI = copies
+
 
 [all]=1-{(id)}
+;[all]=1
 
-VISUAL=HVG, 19, 27
-;Frame(locked)
-IMAGE=[all],Frame/foodFrame.png,{2600/491}%,{2700/736}%,{44000/491}%,{68200/736}%,0,N
+BASERANGE = [all], ON
+
+
+
+
+
+
+
+
+
+IF= [IS_EVENT] = "Yes"
+    
+ENDIF
+
+VISUAL=HVGPS, 19, 27
+<FRAME>=0%,0%,100%,100%
+<IMAGE>=5%,4%,89%,56%
+<ACTION_ICON>=68%,4%,26%,18%
+<NAME>=5%,56%,89%,4%
+<HEADER_REQUIREMENTS>=21%,4%,32%,7%
+<GAIN>=5%,63%,89%,18%
+<SUPER>=5%,82%,89%,15%
+<COST>=5%,4%,16%,11%
+;Border(locked)
+IMAGE=1-6,Frame/foodFrame.png,<FRAME>,0,N
 ;Image(locked)
-IMAGE=[all],Frame\imageFrame.png,{5200/491}%,{5500/736}%,{38700/491}%,{32700/736}%
-;[name]name Frame(locked)
-IMAGE=[all],Frame\nameFrame.png,{5200/491}%,{38200/736}%,{38700/491}%,{2800/736}%
-;[action]Action Type(locked)
-IMAGE=[all],Actions/TALK.png,{31000/491}%,{5500/736}%,{12900/491}%,{13600/736}%,0,PN
+IMAGE=[all],Frame\imageFrame.png,<IMAGE>
+;[name]name Frame
+IMAGE=[all],Frame\nameFrame.png,<NAME>
+;name font(locked)
+FONT=Arial Rounded MT Bold,10,T,#000000
+;[name]name value
+TEXT=[all],"Big Hunt",<NAME>,CENTER,CENTER
+;[action]Action Type
+IMAGE=[all],Actions/TALK.png,<ACTION_ICON>,PN,PN
 ;[action]instant symbol(locked)
-IMAGE=[all],Actions/INSTANT.png,{38800/491}%,{16300/736}%,{5100/491}%,{5500/736}%,0,PN
+IMAGE=[all],Actions/INSTANT.png,{1500/19}%,{500/27}%,{200/19}%,{200/27}%,0,PN
 ;cost font
 FONT=Calisto MT,16,TB,#00000F,#FFFFFF
-;[cost]permanent cost symbol
-IMAGE=[all],Akvile/0.2/Cost.png,{5200/491}%,{5500/736}%,{7800/491}%,{8200/736}%,0,PN
+;[cost]permanent cost symbol(locked)
+IMAGE=[all],Akvile/0.2/Cost.png,{100/19}%,{100/27}%,{300/19}%,{300/27}%,0,PN
 ;[cost]cost value(locked)
-TEXT=[all],99,{5400/491}%,{7200/736}%,{7800/491}%,{8200/736}%,CENTER,CENTER
+TEXT=[all],99,{100/19}%,{200/27}%,{300/19}%,{300/27}%,CENTER,CENTER
 ;requirements font(locked)
 FONT=Arial,10,T,#000000
 ;[req1]requirements1 icon
-IMAGE=[all],Actions/TALK.png,{13400/491}%,{5600/736}%,{5100/491}%,{5400/736}%,0,NP
+IMAGE=[all],Actions/TALK.png,<HEADER_REQUIREMENTS>,0,NP
 ;[req1]requirements1 background
-IMAGE=[all],Akvile/0.2/blue-number.png,{16300/491}%,{9400/736}%,{2600/491}%,{2700/736}%,0,NP
+IMAGE=[all],Akvile/0.2/blue-number.png,{500/19}%,{200/27}%,{100/19}%,{100/27}%,0,NP
 ;[req1]requirement1 number
-TEXT=[all],1,{16400/491}%,{9500/736}%,{2500/491}%,{2700/736}%
+TEXT=[all],1,{1300/19}%,{100/27}%,{500/19}%,{500/27}%
 ;[req2]requirements2 icon
-IMAGE=[all],Actions/TALK.png,38.9%,{5600/736}%,{5100/491}%,{5400/736}%,0,NP
+IMAGE=[all],Actions/TALK.png,{700/19}%,{100/27}%,{200/19}%,{200/27}%,0,NP
 ;[req2]requirements2 background
-IMAGE=[all],Akvile/0.2/blue-number.png,{22000/491}%,{9400/736}%,{2600/491}%,{2700/736}%,0,NP
+IMAGE=[all],Akvile/0.2/blue-number.png,{900/19}%,{200/27}%,{100/19}%,{100/27}%,0,NP
 ;[req2]requirement2 number
-TEXT=[all],2,45.01%,{9500/736}%,{2500/491}%,{2700/736}%
+TEXT=[all],2,{900/19}%,{200/27}%,{100/19}%,{100/27}%
 ;[super]superFrame(locked)
-IMAGE=1-6,Frame\superFrame.png,{5300/491}%,{54500/736}%,{38600/491}%,{13600/736}%
+IMAGE=[all],Frame\superFrame.png,{100/19}%,{2100/27}%,{1700/19}%,{500/27}%
 ;[gain]gain frame(locked)
-IMAGE=1-6,Frame\gainFrame.png,{5200/491}%,{40900/736}%,{38700/491}%,{13600/736}%
+IMAGE=[all],Frame\gainFrame.png,{100/19}%,{1600/27}%,{1700/19}%,{500/27}%
+;[gain]gain1(locked)
+IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{300/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
+;[gain]gain2
+IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{800/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
+;[gain]gain3(locked)
+IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{1400/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
 ;[supergain2]Supergain2
-IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,38.9%,{57100/736}%,{8700/491}%,{9000/736}%,0,NPT
-;[trigger]trigger2(locked)
-IMAGE=[all],Actions/TALK.png,{9900/491}%,{61100/736}%,{7500/491}%,{7100/736}%,0,PN
-;[trigger]trigger1(locked)
-IMAGE=[all],Actions/TALK.png,{5000/491}%,{54600/736}%,{7800/491}%,{7100/736}%,0,PN
-;SafeLine(locked)
-RECTANGLE=[all],{5200/491}%,{5500/736}%,{38700/491}%,85.19%,#0000FF,empty,0.01
-;CardLimits(locked)
-RECTANGLE=[all],{2700/491}%,{2800/736}%,{44000/491}%,{68200/736}%,#FF0000,empty,0.01
+IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{1000/19}%,{2200/27}%,{300/19}%,{300/27}%,0,NPT
+;trigger2(locked)
+IMAGE=[all],Actions/TALK.png,{400/19}%,{2200/27}%,{400/19}%,{400/27}%,0,PN
+;trigger1(locked)
+IMAGE=[all],Actions/FOOD.png,{100/19}%,{2100/27}%,{400/19}%,{400/27}%,0,PN
+;score font(locked)
+FONT=Arial Rounded MT Bold,12,T,#000000
+;[score]score background(locked)
+IMAGE=[all],Akvile/0.2/votes.png,{1500/19}%,{2300/27}%,{300/19}%,{300/27}%,0,PN
+;[score]score value(locked)
+TEXT=[all],3,{1600/19}%,{2400/27}%,{200/19}%,{100/27}%,CENTER,CENTER
 ENDVISUAL

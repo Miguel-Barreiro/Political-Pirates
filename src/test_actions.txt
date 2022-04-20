@@ -1,0 +1,20 @@
+LINK = "11LYC3lbaSMvkLHemIek4mjIKlUnKl6BtS7dmP3hFU9o"
+
+INCLUDE outputInfo.txt
+
+LINKMULTI = copies
+
+[all]=1
+;[all]=1-{(id)}
+
+BASERANGE = [all], ON
+
+
+;VISUAL=HVG, 19, 27
+;ENDVISUAL
+
+VISUAL=HVG, 19, 27
+<FRAME1>=61%,88%,39%,12%
+<FRAME2>=0%,0%,71%,77%
+IMAGE=1-6,,<FRAME1>
+ENDVISUAL

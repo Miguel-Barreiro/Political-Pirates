@@ -1,14 +1,21 @@
-'#########################################
-'Euro-poker cards 2.48 x 3.46 - 825 x 1125
-'#########################################
+;#########################################
+;Euro-poker cards 2.48 x 3.46 - 825 x 1125
+;#########################################
 UNIT=INCH
-CARDSIZE=2.75,3.75
-BORDER=NONE
+;CARDSIZE=2.5,3.5
+CARDSIZE=2.48,3.46
+BORDER=mark
 DPI=300
 
 LINKMULTI = copies
 
 
-DISPLAY=output/SchemesTTS.png,1,0,10
+;DISPLAY=output/SchemesTTS.png
 
 
+
+;BORDER=mark
+;UNIT=INCH
+;PAGE=210,297,PORTRAIT,HV
+;DPI=300
+;CARDSIZE=2.48,3.46
