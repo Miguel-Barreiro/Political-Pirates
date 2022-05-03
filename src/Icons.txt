@@ -2,8 +2,8 @@
 
 ;ICONS DEFINITIONS
 
-[ICON_W] = 1
-[ICON_H] = 1
+[ICON_W] = 2
+[ICON_H] = 2
 
 
 [FOOD_ICON] = "Icons/FoodIcon.png"
@@ -21,15 +21,15 @@
 
 ;HTML TOKENS
 
-[FOOD_TOKEN] = (Food)
-[DRAW_TOKEN] = {Draw}
-[INFLUENCE_TOKEN] = (Influence)
-[RECRUIT_TOKEN] = "Recruit"
-[RECRUITFREE_TOKEN] = "RecruitFreet"
-[VOTE_TOKEN] = "Vote"
-[WOOD_TOKEN] = "Wood"
-[STEAL_TOKEN] = "Steal"
-[PROMOTE_TOKEN] = "Promote"
-[FIGHT_TOKEN] = "Pushout"
-[SHELTER_TOKEN] = "Shelter"
+[FOOD_TOKEN] = "(Food)"
+[DRAW_TOKEN] = "{Draw}"
+[INFLUENCE_TOKEN] = "(Influence)"
+[RECRUIT_TOKEN] = "(Recruit)"
+[RECRUITFREE_TOKEN] = "(RecruitFreet)"
+[VOTE_TOKEN] = "(Vote)"
+[WOOD_TOKEN] = "(Wood)"
+[STEAL_TOKEN] = "(Steal)"
+[PROMOTE_TOKEN] = "(Promote)"
+[FIGHT_TOKEN] = "(Pushout)"
+[SHELTER_TOKEN] = "(Shelter)"
 

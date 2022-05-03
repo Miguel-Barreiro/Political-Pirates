@@ -3,6 +3,7 @@ LINK = "11LYC3lbaSMvkLHemIek4mjIKlUnKl6BtS7dmP3hFU9o"
 INCLUDE outputInfo.txt
 ;INCLUDE visual_components.txt
 INCLUDE=Icons.txt
+INCLUDE=Text_Processing.txt
 
 
 ;ICONS DEFINITIONS
@@ -53,8 +54,8 @@ VISUAL=HVGPS, 19, 27
 <ACTION_ICON>=68%,4%,26%,18%
 <NAME>=5%,56%,89%,4%
 <HEADER_REQUIREMENTS>=21%,4%,32%,7%
-<GAIN>=5%,59%,89%,18%
-<SUPER>=5%,82%,89%,15%
+<GAIN>=5%,59%,90%,18%
+<SUPER>=5%,78%,89%,18%
 <COST>=5%,4%,16%,11%
 ;Border(locked)
 IMAGE=[all],Frame/foodFrame.png,<FRAME>,0,N
@@ -92,28 +93,29 @@ IMAGE=[all],Akvile/0.2/blue-number.png,{900/19}%,{200/27}%,{100/19}%,{100/27}%,0
 TEXT=[all],2,{900/19}%,{200/27}%,{100/19}%,{100/27}%
 ;[super]superFrame(locked)
 IMAGE=[all],Frame\superFrame.png,{100/19}%,{2100/27}%,{1700/19}%,{500/27}%
-;[gain]gain frame(locked)
-IMAGE=[all],Frame\gainFrame.png,{100/19}%,{1600/27}%,{1700/19}%,{500/27}%
-;[gain]gain1(locked)
-IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{300/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
-;[gain]gain2
-IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{800/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
-;[gain]gain3(locked)
-IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{1400/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
-;[supergain2]Supergain2
-IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{1000/19}%,{2200/27}%,{300/19}%,{300/27}%,0,NPT
+;gain frame
+IMAGE=[all],Frame\gainFrame.png,<GAIN>
+;[gain]gain1
+;IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{300/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
+;gain2
+;IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{800/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
+;gain3
+;IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{1400/19}%,{1700/27}%,{300/19}%,{300/27}%,0,NPT
+;[supergain2]Supergain2(locked)
+IMAGE=[all],C:\Users\Barreiros\Documents\Projects\boardgames\Political-Pirates\src\Akvile\0.2\icons\RecruitIcon.png,{1000/19}%,{2100/27}%,{300/19}%,{300/27}%,0,NPT
 ;trigger2(locked)
 IMAGE=[all],Actions/TALK.png,{400/19}%,{2200/27}%,{400/19}%,{400/27}%,0,PN
-;trigger1(locked)
-IMAGE=[all],Actions/FOOD.png,{100/19}%,{2100/27}%,{400/19}%,{400/27}%,0,PN
 ;score font(locked)
 FONT=Arial Rounded MT Bold,12,T,#000000
 ;[score]score background(locked)
 IMAGE=[all],Akvile/0.2/votes.png,{1500/19}%,{2300/27}%,{300/19}%,{300/27}%,0,PN
 ;[score]score value(locked)
 TEXT=[all],3,{1600/19}%,{2400/27}%,{200/19}%,{100/27}%,CENTER,CENTER
-;GAIN FONT(locked)
-FONT=Arial,40,BTF,#000000
-;[gain]GAIN HTML(locked)
-HTMLTEXT=[all],[GAIN],<GAIN>,#FFFFFF,0,T8
+;GAIN FONT ( html)
+HTMLFONT=GainFont,Arial,30,BZ,#000000,JUSTIFY
+HTMLMARGINS=GainFont,0.2,0.2,0.2,0.2,TOP
+;GAIN HTML
+HTMLTEXT=[all],[GAIN],<GAIN>,#FFFFFF,0,T8E,100,GainFont
+;trigger1(locked)
+IMAGE=[all],Actions/FOOD.png,{100/19}%,{2100/27}%,{400/19}%,{400/27}%,0,PN
 ENDVISUAL
