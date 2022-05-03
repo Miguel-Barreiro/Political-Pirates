@@ -1,0 +1,35 @@
+
+
+;ICONS DEFINITIONS
+
+[ICON_W] = 1
+[ICON_H] = 1
+
+
+[FOOD_ICON] = "Icons/FoodIcon.png"
+[DRAW_ICON] = "Icons/DrawIcon.png"
+[INFLUENCE_ICON] = "Icons/InfluenceIcon.png"
+[RECRUIT_ICON] = "Icons/RecruitIcon.png"
+[RECRUITFREE_ICON] = "Icons/RecruitFreetIcon.png"
+[VOTE_ICON] = "Icons/VoteIcon.png"
+[WOOD_ICON] = "Icons/WoodIcon.png"
+[STEAL_ICON] = "Icons/StealIcon.png"
+[PROMOTE_ICON] = "Icons/PromoteIcon.png"
+[FIGHT_ICON] = "Icons/PushoutIcon.png"
+[SHELTER_ICON] = "Icons/ShelterIcon.png"
+
+
+;HTML TOKENS
+
+[FOOD_TOKEN] = (Food)
+[DRAW_TOKEN] = {Draw}
+[INFLUENCE_TOKEN] = (Influence)
+[RECRUIT_TOKEN] = "Recruit"
+[RECRUITFREE_TOKEN] = "RecruitFreet"
+[VOTE_TOKEN] = "Vote"
+[WOOD_TOKEN] = "Wood"
+[STEAL_TOKEN] = "Steal"
+[PROMOTE_TOKEN] = "Promote"
+[FIGHT_TOKEN] = "Pushout"
+[SHELTER_TOKEN] = "Shelter"
+

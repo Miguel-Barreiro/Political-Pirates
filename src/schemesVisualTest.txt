@@ -1,7 +1,37 @@
 LINK = "11LYC3lbaSMvkLHemIek4mjIKlUnKl6BtS7dmP3hFU9o"
 
 INCLUDE outputInfo.txt
+;INCLUDE visual_components.txt
+INCLUDE=Icons.txt
 
+
+;ICONS DEFINITIONS
+;ICON = , FOOD, [FOOD_ICON]
+;ICON = , DRAW, [DRAW_ICON]
+;ICON = , INFLUENCE, [INFLUENCE_ICON]
+;ICON = , RECRUIT, [RECRUIT_ICON]
+;ICON = , RECRUITFREE, [RECRUITFREE_ICON]
+;ICON = , VOTE, [VOTE_ICON]
+;ICON = , WOOD, [WOOD_ICON]
+;ICON = , STEAL, [STEAL_ICON]
+;ICON = , PROMOTE, [PROMOTE_ICON]
+;ICON = , FIGHT, [FIGHT_ICON]
+;ICON = , SHELTER, [SHELTER_ICON]
+;ICON = , F, [_ICON]
+
+;HTML IMAGES
+;HTMLIMAGE = , (Food), [FOOD_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_TOKEN], [FOOD_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_TOKEN], [DRAW_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [INFLUENCE_TOKEN], [INFLUENCE_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUIT_TOKEN], [RECRUIT_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUITFREE_TOKEN], [RECRUITFREE_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [VOTE_TOKEN], [VOTE_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN], [WOOD_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [STEAL_TOKEN], [STEAL_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [PROMOTE_TOKEN], [PROMOTE_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FIGHT_TOKEN], [FIGHT_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [SHELTER_TOKEN], [SHELTER_ICON], [ICON_W], [ICON_H], PM
 
 LINKMULTI = copies
 
@@ -10,12 +40,6 @@ LINKMULTI = copies
 ;[all]=1
 
 BASERANGE = [all], ON
-
-
-
-
-
-
 
 
 
@@ -29,11 +53,11 @@ VISUAL=HVGPS, 19, 27
 <ACTION_ICON>=68%,4%,26%,18%
 <NAME>=5%,56%,89%,4%
 <HEADER_REQUIREMENTS>=21%,4%,32%,7%
-<GAIN>=5%,63%,89%,18%
+<GAIN>=5%,59%,89%,18%
 <SUPER>=5%,82%,89%,15%
 <COST>=5%,4%,16%,11%
 ;Border(locked)
-IMAGE=1-6,Frame/foodFrame.png,<FRAME>,0,N
+IMAGE=[all],Frame/foodFrame.png,<FRAME>,0,N
 ;Image(locked)
 IMAGE=[all],Frame\imageFrame.png,<IMAGE>
 ;[name]name Frame
@@ -43,7 +67,7 @@ FONT=Arial Rounded MT Bold,10,T,#000000
 ;[name]name value
 TEXT=[all],"Big Hunt",<NAME>,CENTER,CENTER
 ;[action]Action Type
-IMAGE=[all],Actions/TALK.png,<ACTION_ICON>,PN,PN
+IMAGE=[all],Actions/TALK.png,<ACTION_ICON>,0,APN
 ;[action]instant symbol(locked)
 IMAGE=[all],Actions/INSTANT.png,{1500/19}%,{500/27}%,{200/19}%,{200/27}%,0,PN
 ;cost font
@@ -59,7 +83,7 @@ IMAGE=[all],Actions/TALK.png,<HEADER_REQUIREMENTS>,0,NP
 ;[req1]requirements1 background
 IMAGE=[all],Akvile/0.2/blue-number.png,{500/19}%,{200/27}%,{100/19}%,{100/27}%,0,NP
 ;[req1]requirement1 number
-TEXT=[all],1,{1300/19}%,{100/27}%,{500/19}%,{500/27}%
+TEXT=[all],1,{1300/19}%,{100/27}%,{500/19}%,{500/27}%,CENTER,CENTER
 ;[req2]requirements2 icon
 IMAGE=[all],Actions/TALK.png,{700/19}%,{100/27}%,{200/19}%,{200/27}%,0,NP
 ;[req2]requirements2 background
@@ -88,4 +112,8 @@ FONT=Arial Rounded MT Bold,12,T,#000000
 IMAGE=[all],Akvile/0.2/votes.png,{1500/19}%,{2300/27}%,{300/19}%,{300/27}%,0,PN
 ;[score]score value(locked)
 TEXT=[all],3,{1600/19}%,{2400/27}%,{200/19}%,{100/27}%,CENTER,CENTER
+;GAIN FONT(locked)
+FONT=Arial,40,BTF,#000000
+;[gain]GAIN HTML(locked)
+HTMLTEXT=[all],[GAIN],<GAIN>,#FFFFFF,0,T8
 ENDVISUAL
