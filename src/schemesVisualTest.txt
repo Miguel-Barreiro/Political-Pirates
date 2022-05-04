@@ -50,13 +50,16 @@ ENDIF
 
 VISUAL=HVGPS, 19, 27
 <FRAME>=0%,0%,100%,100%
-<IMAGE>=5%,4%,89%,56%
+<IMAGE>=5%,4%,89%,52%
 <ACTION_ICON>=68%,4%,26%,18%
 <NAME>=5%,56%,89%,4%
-<HEADER_REQUIREMENTS>=21%,4%,32%,7%
 <GAIN>=5%,59%,90%,18%
 <SUPER>=5%,78%,89%,18%
 <COST>=5%,4%,16%,11%
+<REQ1>=21%,4%,16%,11%
+<REQ2>=42%,4%,16%,11%
+<REQ1Numberbackground>=32%,11%,11%,7%
+<REQ2NumberBackground>=53%,11%,11%,7%
 ;Border(locked)
 IMAGE=[all],Frame/foodFrame.png,<FRAME>,0,N
 ;Image(locked)
@@ -80,17 +83,17 @@ TEXT=[all],99,{100/19}%,{200/27}%,{300/19}%,{300/27}%,CENTER,CENTER
 ;requirements font(locked)
 FONT=Arial,10,T,#000000
 ;[req1]requirements1 icon
-IMAGE=[all],Actions/TALK.png,<HEADER_REQUIREMENTS>,0,NP
+IMAGE=[all],Actions/TALK.png,<REQ1>,0,NP
 ;[req1]requirements1 background
-IMAGE=[all],Akvile/0.2/blue-number.png,{500/19}%,{200/27}%,{100/19}%,{100/27}%,0,NP
+IMAGE=[all],Akvile/0.2/blue-number.png,<REQ1Numberbackground>,0,NP
 ;[req1]requirement1 number
-TEXT=[all],1,{1300/19}%,{100/27}%,{500/19}%,{500/27}%,CENTER,CENTER
+TEXT=[all],1,<REQ1Numberbackground>,CENTER,CENTER
 ;[req2]requirements2 icon
-IMAGE=[all],Actions/TALK.png,{700/19}%,{100/27}%,{200/19}%,{200/27}%,0,NP
+IMAGE=[all],Actions/TALK.png,<REQ2>,0,NP
 ;[req2]requirements2 background
-IMAGE=[all],Akvile/0.2/blue-number.png,{900/19}%,{200/27}%,{100/19}%,{100/27}%,0,NP
+IMAGE=[all],Akvile/0.2/blue-number.png,<REQ2NumberBackground>,0,NP
 ;[req2]requirement2 number
-TEXT=[all],2,{900/19}%,{200/27}%,{100/19}%,{100/27}%
+TEXT=[all],2,<REQ2NumberBackground>
 ;[super]superFrame(locked)
 IMAGE=[all],Frame\superFrame.png,{100/19}%,{2100/27}%,{1700/19}%,{500/27}%
 ;gain frame
@@ -112,8 +115,8 @@ IMAGE=[all],Akvile/0.2/votes.png,{1500/19}%,{2300/27}%,{300/19}%,{300/27}%,0,PN
 ;[score]score value(locked)
 TEXT=[all],3,{1600/19}%,{2400/27}%,{200/19}%,{100/27}%,CENTER,CENTER
 ;GAIN FONT ( html)
-HTMLFONT=GainFont,Arial,30,BZ,#000000,JUSTIFY
-HTMLMARGINS=GainFont,0.2,0.2,0.2,0.2,TOP
+HTMLFONT=GainFont,Arial,30,BZ,#000000,CENTER
+HTMLMARGINS=GainFont,0.2,0.2,0.2,0.2,CENTER
 ;GAIN HTML
 HTMLTEXT=[all],[GAIN],<GAIN>,#FFFFFF,0,T8E,100,GainFont
 ;trigger1(locked)
