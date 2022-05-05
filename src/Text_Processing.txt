@@ -1,2 +1,30 @@
 ;[GAIN] = JOIN("<div>", [GAIN], "</div>")
 
+
+[GAIN_1] = TOKENIZESEQ([GAIN], 1, #)
+[GAIN_2] = TOKENIZESEQ([GAIN], 2, #)
+[GAIN_3] = TOKENIZESEQ([GAIN], 3, #)
+
+;IF= [GAIN_3] <>""
+
+    [GAIN] = JOIN("<div style='float: center;clear: none;'><div>", [GAIN_1], "</div>","<div>", [GAIN_2], "</div>","<div>", [GAIN_3], "</div></div>")
+
+;ELSEIF=[GAIN_2] <> ""
+;    [GAIN] = JOIN("<div>", [GAIN_1], "</div>","<div>", [GAIN_2], "</div>")
+
+;ELSEIF=[GAIN_2] <> ""
+;    [GAIN] = JOIN("<div>", [GAIN], "</div>")
+
+;ENDIF
+
+
+
+
+
+
+
+
+
+
+
+
