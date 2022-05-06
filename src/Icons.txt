@@ -2,8 +2,8 @@
 
 ;ICONS DEFINITIONS
 
-[ICON_W] = 2
-[ICON_H] = 2
+[ICON_W] = 2.5
+[ICON_H] = 2.5
 
 
 [FOOD_ICON] =           "Icons/FoodIcon.png"
@@ -19,6 +19,21 @@
 [SHELTER_ICON] =        "Icons/ShelterIcon.png"
 [BUILD_ICON]=           "Icons/BuildIcon.png"
 [EXECUTE_ICON]=         "Icons/executeIcon.png"
+
+
+[FOOD_ICON_1] =           "Icons/FoodIcon.png"
+[DRAW_ICON_1] =           "Icons/DrawIcon.png"
+[INFLUENCE_ICON_1] =      "Icons/InfluenceIcon.png"
+[RECRUIT_ICON_1] =        "Icons/RecruitIcon.png"
+[RECRUITFREE_ICON_1]=     "Icons/RecruitFreetIcon.png"
+[VOTE_ICON_1] =           "Icons/VoteIcon.png"
+[WOOD_ICON_1] =           "Icons/WoodIcon.png"
+[STEAL_ICON_1] =          "Icons/StealIcon.png"
+[PROMOTE_ICON_1] =        "Icons/PromoteIcon.png"
+[FIGHT_ICON_1] =          "Icons/PushoutIcon.png"
+[SHELTER_ICON_1] =        "Icons/ShelterIcon.png"
+[BUILD_ICON_1]=           "Icons/BuildIcon.png"
+[EXECUTE_ICON_1]=         "Icons/executeIcon.png"
 
 
 
@@ -98,37 +113,55 @@
 
 ;HTML TOKENS
 
-[FOOD_TOKEN] = "Food"
-[DRAW_TOKEN] = "Draw"
-[INFLUENCE_TOKEN] = "Influence"
-[RECRUIT_TOKEN] = "Recruit"
-[RECRUITFREE_TOKEN] = "RecruitFreet"
-[VOTE_TOKEN] = "Vote"
-[WOOD_TOKEN] = "Wood"
-[STEAL_TOKEN] = "Steal"
-[PROMOTE_TOKEN] = "Promote"
-[FIGHT_TOKEN] = "Fight"
-[SHELTER_TOKEN] = "Shelter"
-[BUILD_TOKEN]= "Build"
-[EXECUTE_TOKEN]= "Execute"
+[FOOD_TOKEN] = "food"
+[DRAW_TOKEN] = "draw"
+[INFLUENCE_TOKEN] = "influence"
+[RECRUIT_TOKEN] = "recruit"
+[RECRUITFREE_TOKEN] = "recruitFree"
+[VOTE_TOKEN] = "vote"
+[WOOD_TOKEN] = "wood"
+[STEAL_TOKEN] = "steal"
+[PROMOTE_TOKEN] = "promote"
+[FIGHT_TOKEN] = "fight"
+[SHELTER_TOKEN] = "shelter"
+[BUILD_TOKEN]= "build"
+[EXECUTE_TOKEN]= "execute"
 
 
-[FOOD_TOKEN_1] = "(Food)"
-[DRAW_TOKEN_1] = "(Draw)"
-[INFLUENCE_TOKEN_1] = "(Influence)"
-[RECRUIT_TOKEN_1] = "(Recruit)"
-[RECRUITFREE_TOKEN_1] = "(RecruitFreet)"
-[VOTE_TOKEN_1] = "(Vote)"
-[WOOD_TOKEN_1] = "(Wood)"
-[STEAL_TOKEN_1] = "(Steal)"
-[PROMOTE_TOKEN_1] = "(Promote)"
-[FIGHT_TOKEN_1] = "(Fight)"
-[SHELTER_TOKEN_1] = "(Shelter)"
-[BUILD_TOKEN_1]= "(Build)"
-[EXECUTE_TOKEN_1]= "(Execute)"
+;[FOOD_TOKEN_1] = JOIN("(",[FOOD_TOKEN], "_1)")
+[FOOD_TOKEN_0] =            JOIN("(",[FOOD_TOKEN], ")")
+[DRAW_TOKEN_0] =            JOIN("(",[DRAW_TOKEN], ")")
+[INFLUENCE_TOKEN_0] =       JOIN("(",[INFLUENCE_TOKEN], ")")
+[RECRUIT_TOKEN_0] =         JOIN("(",[RECRUIT_TOKEN], ")")
+[RECRUITFREE_TOKEN_0] =     JOIN("(",[RECRUITFREE_TOKEN], ")")
+[VOTE_TOKEN_0] =            JOIN("(",[VOTE_TOKEN], ")")
+[WOOD_TOKEN_0] =            JOIN("(",[WOOD_TOKEN], ")")
+[STEAL_TOKEN_0] =           JOIN("(",[STEAL_TOKEN], ")")
+[PROMOTE_TOKEN_0] =         JOIN("(",[PROMOTE_TOKEN], ")")
+[FIGHT_TOKEN_0] =           JOIN("(",[FIGHT_TOKEN], ")")
+[SHELTER_TOKEN_0] =         JOIN("(",[SHELTER_TOKEN], ")")
+
+[BUILD_TOKEN_0] =           JOIN("(",[BUILD_TOKEN], ")")
+[EXECUTE_TOKEN_0] =         JOIN("(",[EXECUTE_TOKEN], ")")
 
 
-;[FOOD_TOKEN_2] = JOIN([FOOD_TOKEN], "_2")
+
+[FOOD_TOKEN_1] =            JOIN("(",[FOOD_TOKEN], "_1)")
+[DRAW_TOKEN_1] =            JOIN("(",[DRAW_TOKEN], "_1)")
+[INFLUENCE_TOKEN_1] =       JOIN("(",[INFLUENCE_TOKEN], "_1)")
+[RECRUIT_TOKEN_1] =         JOIN("(",[RECRUIT_TOKEN], "_1)")
+[RECRUITFREE_TOKEN_1] =     JOIN("(",[RECRUITFREE_TOKEN], "_1)")
+[VOTE_TOKEN_1] =            JOIN("(",[VOTE_TOKEN], "_1)")
+[WOOD_TOKEN_1] =            JOIN("(",[WOOD_TOKEN], "_1)")
+[STEAL_TOKEN_1] =           JOIN("(",[STEAL_TOKEN], "_1)")
+[PROMOTE_TOKEN_1] =         JOIN("(",[PROMOTE_TOKEN], "_1)")
+[FIGHT_TOKEN_1] =           JOIN("(",[FIGHT_TOKEN], "_1)")
+[SHELTER_TOKEN_1] =         JOIN("(",[SHELTER_TOKEN], "_1)")
+
+[BUILD_TOKEN_1] =           JOIN("(",[BUILD_TOKEN], "_1)")
+[EXECUTE_TOKEN_1] =         JOIN("(",[EXECUTE_TOKEN], "_1)")
+
+
 [FOOD_TOKEN_2] =            JOIN("(",[FOOD_TOKEN], "_2)")
 [DRAW_TOKEN_2] =            JOIN("(",[DRAW_TOKEN], "_2)")
 [INFLUENCE_TOKEN_2] =       JOIN("(",[INFLUENCE_TOKEN], "_2)")

@@ -7,7 +7,10 @@
 
 ;IF= [GAIN_3] <>""
 
-    [GAIN] = JOIN("<div style='float: center;clear: none;'><div>", [GAIN_1], "</div>","<div>", [GAIN_2], "</div>","<div>", [GAIN_3], "</div></div>")
+;    [GAIN] = JOIN("<div style='float: center;clear: none;'><div>", [GAIN_1], "</div>","<div>", [GAIN_2], "</div>","<div>", [GAIN_3], "</div></div>")
+
+[GAIN] = JOIN("#",[GAIN_1], "  :  ", [GAIN_2], "   :   ", [GAIN_3], "#")
+
 
 ;ELSEIF=[GAIN_2] <> ""
 ;    [GAIN] = JOIN("<div>", [GAIN_1], "</div>","<div>", [GAIN_2], "</div>")
