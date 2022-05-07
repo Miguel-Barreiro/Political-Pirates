@@ -7,9 +7,22 @@
 
 ;IF= [GAIN_3] <>""
 
-;    [GAIN] = JOIN("<div style='float: center;clear: none;'><div>", [GAIN_1], "</div>","<div>", [GAIN_2], "</div>","<div>", [GAIN_3], "</div></div>")
 
-[GAIN] = JOIN("#",[GAIN_1], "  :  ", [GAIN_2], "   :   ", [GAIN_3], "#")
+[DIV_STYLE_HTML] = "background:white;"
+[DIV_STYLE_HTML_2] = "background:red;"
+
+[DIV_START] = JOIN("<div style='",[DIV_STYLE_HTML],"' >")
+[DIV_START_2] = JOIN("<div style='",[DIV_STYLE_HTML_2],"' >")
+[DIV_END] = "</div>"
+
+[GAIN1_HTML] = JOIN([DIV_START], [GAIN_1], [DIV_END])
+[GAIN2_HTML] = JOIN([DIV_START_2], [GAIN_2], [DIV_END])
+[GAIN3_HTML] = JOIN([DIV_START], [GAIN_3], [DIV_END])
+
+;[GAIN] = JOIN([GAIN1_HTML],[GAIN2_HTML],[GAIN3_HTML])
+
+;[GAIN] = JOIN("#",[GAIN_1], [GAIN_2], [GAIN_3], "#")
+;[GAIN] = JOIN("",[GAIN_1], "", [GAIN_2], "", [GAIN_3], "")
 
 
 ;ELSEIF=[GAIN_2] <> ""

@@ -2,8 +2,8 @@
 
 ;ICONS DEFINITIONS
 
-[ICON_W] = 2.5
-[ICON_H] = 2.5
+[ICON_W] = 1.2
+[ICON_H] = 1.5
 
 
 [FOOD_ICON] =           "Icons/FoodIcon.png"
