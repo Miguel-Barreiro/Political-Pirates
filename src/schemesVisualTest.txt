@@ -169,7 +169,7 @@ IF= [IS_EVENT] = "Yes"
     
 ENDIF
 
-;VISUAL=HVGPS, 19, 27
+VISUAL=HVGPS, 19, 27
 <FRAME>=0%,0%,100%,100%
 <IMAGE>=5%,4%,89%,52%
 <ACTION_ICON>=68%,4%,26%,18%
@@ -245,14 +245,17 @@ TEXT=[all],3,<SCORE>,CENTER,CENTER
 HTMLFONT=GainFont,Arial,30,BKZE,#000000,CENTER
 HTMLMARGINS=GainFont,0.2,0.2,0.2,0.2,CENTER,100,30,10
 ;GAIN HTML
-;HTMLTEXT=[all],[GAIN],<GAIN>,#FFFFFF,0,EMTF,100,GainFont
-IF= [GAIN_3] <>""
-    HTMLTEXT=[all],JOIN("",[GAIN_1], "&nbsp;", [GAIN_2], "&nbsp;", [GAIN_3], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
-ELSEIF=[GAIN_2] <>""
-    HTMLTEXT=[all],JOIN("",[GAIN_1], "&nbsp;&nbsp;", [GAIN_2], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
-ELSE
-    HTMLTEXT=[all],JOIN("",[GAIN_1], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
-ENDIF
+HTMLTEXT=[all],JOIN("",[GAIN_1], "&nbsp;", [GAIN_2], "&nbsp;", [GAIN_3], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
 
 
-;ENDVISUAL
+ENDVISUAL
+
+;IF= [GAIN_3] <>""
+;    HTMLTEXT=[all],JOIN("",[GAIN_1], "&nbsp;", [GAIN_2], "&nbsp;", [GAIN_3], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
+;ELSEIF=[GAIN_2] <>""
+;    HTMLTEXT=[all],JOIN("",[GAIN_1], "&nbsp;&nbsp;", [GAIN_2], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
+;ELSEIF=[GAIN_2] <>""
+;    HTMLTEXT=[all],JOIN("",[GAIN_1], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
+;ENDIF
+
+
