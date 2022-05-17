@@ -1,0 +1,75 @@
+;[GAIN] = JOIN("<div>", [GAIN], "</div>")
+
+
+[GAIN_1] = TOKENIZESEQ([GAIN], 1, #)
+[GAIN_2] = TOKENIZESEQ([GAIN], 2, #)
+[GAIN_3] = TOKENIZESEQ([GAIN], 3, #)
+
+
+[SIMPLE_GAIN] = JOIN("",[GAIN_1], "&nbsp;", [GAIN_2], "&nbsp;", [GAIN_3], "")
+
+[SIMPLE_SUPER_GAIN] = JOIN("",[SUPER_GAIN], "")
+
+
+
+;REQUIREMENTS
+
+[REQUIREMENTS_1]=TOKENIZESEQ([REQUIREMENTS], 1, #)
+[REQUIREMENTS_2]=TOKENIZESEQ([REQUIREMENTS], 2, #)
+[requirements1_cards]=RANGEREM([all], labelrange([REQUIREMENTS_1], ""))
+[requirements2_cards]=RANGEREM([all], labelrange([REQUIREMENTS_2], ""))
+
+[REQUIREMENTS_1_TYPE]=TOKENIZESEQ([REQUIREMENTS_1], 1, _)
+[REQUIREMENTS_1_NUMBER]=TOKENIZESEQ([REQUIREMENTS_1], 2, _)
+[REQUIREMENTS_2_TYPE]=TOKENIZESEQ([REQUIREMENTS_2], 1, _)
+[REQUIREMENTS_2_NUMBER]=TOKENIZESEQ([REQUIREMENTS_2], 2, _)
+
+[requirements1_number_cards]=RANGEREM([all], labelrange([REQUIREMENTS_1_NUMBER], ""))
+[requirements2_number_cards]=RANGEREM([all], labelrange([REQUIREMENTS_2_NUMBER], ""))
+
+
+;VOTES
+[SCORE_TYPE]=TOKENIZESEQ([SCORE], 1, _)
+[SCORE_NUMBER]=TOKENIZESEQ([SCORE], 2, _)
+[score_cards]=RANGEREM([all], labelrange([SCORE], ""))
+
+
+;TRIGGERS
+[TRIGGER_1]=TOKENIZESEQ([TRIGGER], 1, #)
+[TRIGGER_2]=TOKENIZESEQ([TRIGGER], 2, #)
+[trigger1_cards]=RANGEREM([all], labelrange([TRIGGER_1], ""))
+[trigger2_cards]=RANGEREM([all], labelrange([TRIGGER_2], ""))
+
+
+
+
+
+
+;IF= [GAIN_3] <>""
+
+
+;[GAIN] = JOIN([GAIN1_HTML],[GAIN2_HTML],[GAIN3_HTML])
+
+;[GAIN] = JOIN("#",[GAIN_1], [GAIN_2], [GAIN_3], "#")
+;[GAIN] = JOIN("",[GAIN_1], "", [GAIN_2], "", [GAIN_3], "")
+
+
+;ELSEIF=[GAIN_2] <> ""
+;    [GAIN] = JOIN("<div>", [GAIN_1], "</div>","<div>", [GAIN_2], "</div>")
+
+;ELSEIF=[GAIN_2] <> ""
+;    [GAIN] = JOIN("<div>", [GAIN], "</div>")
+
+;ENDIF
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,109 +10,264 @@ BASERANGE = [all], ON
 [startingSchemes] = labelrange([WOOD_COST], -1)
 
 
-INCLUDE=visual_components.txt
-INCLUDE=data_parsing.txt
+
+INCLUDE=code/schemesOutputInfo.txt
+INCLUDE=Icons.txt
+INCLUDE=code/schemesTextProcessing.txt
 
 
 
-VISUAL=HVG, 10, 10
-;Frame
-IMAGE=[all],[ACTION_FRAME_[SCHEME_TYPE]],{2500/543}%,{3000/815}%,{48900/543}%,{74900/815}%,0,N
-;[all]FrameTEST
-;IMAGE=,Akvile/0.2/frame-red.png,{5700/598}%,{5700/815}%,{48200/598}%,{69800/815}%
-;title font(locked)
-FONT=MS Sans Serif,8,BI,#000000
-;FONT=,10,BT,#000000,#000000
-;name
-TEXT=[all],[NAME],{6500/543}%,{16400/815}%,{40700/543}%,4.54%,CENTER
-;CutLine(locked)
-RECTANGLE=[all],{2600/543}%,{3000/815}%,{49200/543}%,92.27%,#FF0000,empty,0.01
-;SafeLine(locked)
-RECTANGLE=[all],{5200/543}%,{5800/815}%,{43700/543}%,{69500/815}%,#0000FF,empty,0.01
-;Action Type
-IMAGE=,[ACTION_ICON_[SCHEME_TYPE]],{37800/543}%,7.73%,19.89%,{9500/815}%,0,PN
-;[TALK_AMBUSH]IMAGE=,,{42600/598}%,{5800/815}%,19.9%,{9900/815}%,0,TP
-;instant symbol
-IMAGE=[instants],Actions/INSTANT.png,{33000/543}%,{6900/815}%,{4600/543}%,7.73%,0,PN
-;[req2]requirements2 background
-IMAGE=[requirements2_cards],Akvile/0.2/requirementBackground.png,{19000/543}%,{8200/815}%,{5700/543}%,{5100/815}%,0,NP
-;[req1]requirements1 background
-IMAGE=[requirements1_cards],Akvile/0.2/requirementBackground.png,25.23%,{8200/815}%,11.05%,{5100/815}%,0,NP
-;[req1]requirements1
-IMAGE=[requirements1_cards],[[REQUIREMENTS_1_TYPE].action],25.23%,{8200/815}%,11.05%,{5100/815}%,0,NP
-;[req1]requirements1 number background
-IMAGE=[requirements1_cards],Akvile/0.2/blue-number.png,{17100/543}%,{11700/815}%,{4100/543}%,{4400/815}%,0,NP
-;[req1]requirement 1 number
-TEXT=[requirements1_cards],[REQUIREMENTS_1_NUMBER],{17500/543}%,{11800/815}%,{3400/543}%,{4000/815}%
-;[req2]requirements2
-IMAGE=[requirements2_cards],[[REQUIREMENTS_2_TYPE].action],{19000/543}%,{8200/815}%,{5700/543}%,{5100/815}%,0,NP
-;[req2]requirements2 number background
-IMAGE=[requirements2_cards],Akvile/0.2/blue-number.png,{22700/543}%,{11600/815}%,{3800/543}%,{3900/815}%,0,NP
-;[req2]requirement 2 number
-TEXT=[requirements2_cards],[REQUIREMENTS_2_NUMBER],{22800/543}%,{11700/815}%,{3400/543}%,{4000/815}%
-;permanent cost symbol
-IMAGE=[all],Akvile/0.2/Cost.png,{5200/543}%,{5800/815}%,16.39%,{9900/815}%,0,PN
+
+;ICONS DEFINITIONS
+;ICON = , FOOD, [FOOD_ICON]
+;ICON = , DRAW, [DRAW_ICON]
+;ICON = , INFLUENCE, [INFLUENCE_ICON]
+;ICON = , RECRUIT, [RECRUIT_ICON]
+;ICON = , RECRUITFREE, [RECRUITFREE_ICON]
+;ICON = , VOTE, [VOTE_ICON]
+;ICON = , WOOD, [WOOD_ICON]
+;ICON = , STEAL, [STEAL_ICON]
+;ICON = , PROMOTE, [PROMOTE_ICON]
+;ICON = , FIGHT, [FIGHT_ICON]
+;ICON = , SHELTER, [SHELTER_ICON]
+;ICON = , F, [_ICON]
+
+;HTML IMAGES
+;HTMLIMAGE = , (Food),              [FOOD_ICON], [ICON_W], [ICON_H], PM
+
+
+;   TAGS
+HTMLIMAGE = , [WOOD_SYMBOL_TOKEN],         [WOOD_ACTION_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE= , [FOOD_SYMBOL_TOKEN],         [FOOD_ACTION_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [AMBUSH_SYMBOL_TOKEN],       [AMBUSH_ACTION_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [TALK_SYMBOL_TOKEN],         [TALK_ACTION_ICON], [ICON_W], [ICON_H], PM
+
+;   0
+HTMLIMAGE = , [FOOD_TOKEN_0],         [FOOD_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_TOKEN_0],         [DRAW_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [INFLUENCE_TOKEN_0],    [INFLUENCE_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUIT_TOKEN_0],      [RECRUIT_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUITFREE_TOKEN_0],  [RECRUITFREE_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [VOTE_TOKEN_0],         [VOTE_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_0],         [WOOD_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [STEAL_TOKEN_0],        [STEAL_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [PROMOTE_TOKEN_0],      [PROMOTE_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FIGHT_TOKEN_0],        [FIGHT_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [SHELTER_TOKEN_0],      [SHELTER_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [BUILD_TOKEN_0],        [BUILD_ICON], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [EXECUTE_TOKEN_0],      [EXECUTE_ICON], [ICON_W], [ICON_H], PM
+
+;   1
+HTMLIMAGE = , [FOOD_TOKEN_1],         [FOOD_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_TOKEN_1],         [DRAW_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [INFLUENCE_TOKEN_1],    [INFLUENCE_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUIT_TOKEN_1],      [RECRUIT_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUITFREE_TOKEN_1],  [RECRUITFREE_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [VOTE_TOKEN_1],         [VOTE_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_1],         [WOOD_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [STEAL_TOKEN_1],        [STEAL_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [PROMOTE_TOKEN_1],      [PROMOTE_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FIGHT_TOKEN_1],        [FIGHT_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [SHELTER_TOKEN_1],      [SHELTER_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [BUILD_TOKEN_1],        [BUILD_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [EXECUTE_TOKEN_1],      [EXECUTE_ICON_1], [ICON_W], [ICON_H], PM
+
+;   2
+HTMLIMAGE = , [FOOD_TOKEN_2],       [FOOD_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_TOKEN_2],       [DRAW_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [INFLUENCE_TOKEN_2],  [INFLUENCE_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUIT_TOKEN_2],    [SHELTER_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUITFREE_TOKEN_2],      [RECRUITFREE_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [VOTE_TOKEN_2],      [VOTE_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_2],      [WOOD_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [STEAL_TOKEN_2],      [STEAL_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [PROMOTE_TOKEN_2],      [PROMOTE_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FIGHT_TOKEN_2],      [FIGHT_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [SHELTER_TOKEN_2],      [SHELTER_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [BUILD_TOKEN_2],        [BUILD_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [EXECUTE_TOKEN_2],      [EXECUTE_ICON_2], [ICON_W], [ICON_H], PM
+
+;   3
+HTMLIMAGE = , [FOOD_TOKEN_3],      [FOOD_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_TOKEN_3],      [DRAW_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [INFLUENCE_TOKEN_3],      [INFLUENCE_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUIT_TOKEN_3],      [RECRUIT_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUITFREE_TOKEN_3],      [RECRUITFREE_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [VOTE_TOKEN_3],      [VOTE_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_3],      [WOOD_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [STEAL_TOKEN_3],      [STEAL_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [PROMOTE_TOKEN_3],      [PROMOTE_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FIGHT_TOKEN_3],      [FIGHT_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [SHELTER_TOKEN_3],      [SHELTER_ICON_3], [ICON_W], [ICON_H], PM
+
+;   4
+HTMLIMAGE = , [FOOD_TOKEN_4] ,      [FOOD_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_TOKEN_4],      [DRAW_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [INFLUENCE_TOKEN_4],      [INFLUENCE_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUIT_TOKEN_4],      [RECRUIT_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [RECRUITFREE_TOKEN_4],      [RECRUITFREE_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [VOTE_TOKEN_4],      [VOTE_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_4],      [WOOD_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [STEAL_TOKEN_4],      [STEAL_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [PROMOTE_TOKEN_4],      [PROMOTE_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FIGHT_TOKEN_4],      [FIGHT_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [SHELTER_TOKEN_4],      [SHELTER_ICON_4], [ICON_W], [ICON_H], PM
+
+;   5
+HTMLIMAGE = , [DRAW_TOKEN_5],      [DRAW_ICON_5], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_TOKEN_5],      [FOOD_ICON_5], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_5],      [WOOD_ICON_5], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [VOTE_TOKEN_5],      [VOTE_ICON_5], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [SHELTER_TOKEN_5],      [SHELTER_ICON_5], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [STEAL_TOKEN_5],      [STEAL_ICON_5], [ICON_W], [ICON_H], PM
+
+;   6
+HTMLIMAGE = , [DRAW_TOKEN_6],      [DRAW_ICON_6], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_TOKEN_6],      [FOOD_ICON_6], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_6],      [WOOD_ICON_6], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [VOTE_TOKEN_6],      [VOTE_ICON_6], [ICON_W], [ICON_H], PM
+;   7
+HTMLIMAGE = , [FOOD_TOKEN_7],      [FOOD_ICON_7], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_7],      [WOOD_ICON_7], [ICON_W], [ICON_H], PM
+;   8
+HTMLIMAGE = , [FOOD_TOKEN_8],      [FOOD_ICON_8], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_8],      [WOOD_ICON_8], [ICON_W], [ICON_H], PM
+;   9
+HTMLIMAGE = , [FOOD_TOKEN_9],      [FOOD_ICON_9], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_9],      [WOOD_ICON_9], [ICON_W], [ICON_H], PM
+;   10
+HTMLIMAGE = , [FOOD_TOKEN_10],      [FOOD_ICON_10], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_TOKEN_10],      [WOOD_ICON_10], [ICON_W], [ICON_H], PM
+;   11--16
+HTMLIMAGE = , [FOOD_TOKEN_11],      [FOOD_ICON_11], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_TOKEN_12],      [FOOD_ICON_12], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_TOKEN_13],      [FOOD_ICON_13], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_TOKEN_14],      [FOOD_ICON_14], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_TOKEN_15],      [FOOD_ICON_15], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_TOKEN_16],      [FOOD_ICON_16], [ICON_W], [ICON_H], PM
+
+
+;COSTS
+
+HTMLIMAGE = , [FOOD_COST_TOKEN_1],         [FOOD_COST_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_COST_TOKEN_2],         [FOOD_COST_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_COST_TOKEN_3],         [FOOD_COST_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_COST_TOKEN_4],         [FOOD_COST_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_COST_TOKEN_5],         [FOOD_COST_ICON_5], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_COST_TOKEN_6],         [FOOD_COST_ICON_6], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [FOOD_COST_TOKEN_7],         [FOOD_COST_ICON_7], [ICON_W], [ICON_H], PM
+
+HTMLIMAGE = , [WOOD_COST_TOKEN_1],         [WOOD_COST_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_COST_TOKEN_2],         [WOOD_COST_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_COST_TOKEN_3],         [WOOD_COST_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_COST_TOKEN_4],         [WOOD_COST_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_COST_TOKEN_5],         [WOOD_COST_ICON_5], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_COST_TOKEN_6],         [WOOD_COST_ICON_6], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [WOOD_COST_TOKEN_7],         [WOOD_COST_ICON_7], [ICON_W], [ICON_H], PM
+
+HTMLIMAGE = , [DRAW_COST_TOKEN_1],         [DRAW_COST_ICON_1], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_COST_TOKEN_2],         [DRAW_COST_ICON_2], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_COST_TOKEN_3],         [DRAW_COST_ICON_3], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_COST_TOKEN_4],         [DRAW_COST_ICON_4], [ICON_W], [ICON_H], PM
+HTMLIMAGE = , [DRAW_COST_TOKEN_5],         [DRAW_COST_ICON_5], [ICON_W], [ICON_H], PM
+
+
+
+LINKMULTI = copies
+
+
+[all]=1-{(id)}
+;[all]=1
+
+BASERANGE = [all], ON
+
+
+
+IF= [IS_EVENT] = "Yes"
+
+ENDIF
+
+;VISUAL=HVGPS, 19, 27
+<FRAME>=0%,0%,100%,100%
+<IMAGE>=5%,4%,89%,52%
+<ACTION_ICON>=68%,4%,26%,18%
+<NAME>=5%,56%,89%,4%
+<GAIN>=5%,60%,89%,18%
+<SUPER>=5%,78%,89%,18%
+<COST>=5%,4%,16%,11%
+<REQ1>=21%,4%,16%,11%
+<REQ2>=42%,4%,16%,11%
+<REQ1NUMBERBACKGROUND>=32%,11%,11%,7%
+<REQ2NUMBERBACKGROUND>=53%,11%,11%,7%
+<SUPERGAIN>=37%,78%,42%,18%
+<SUPERTRIGGER1>=5%,78%,21%,15%
+<SUPERTRIGGER2>=21%,85%,16%,11%
+<SCORE>=79%,74%,16%,11%
+;Border(locked)
+IMAGE=[all],Frame/foodFrame.png,<FRAME>,0,N
+;Image(locked)
+IMAGE=[all],Frame\imageFrame.png,<IMAGE>
+;[name]name Frame
+IMAGE=[all],Frame\nameFrame.png,<NAME>
+;name font(locked)
+FONT=Arial Rounded MT Bold,10,T,#000000
+;[name]name value
+TEXT=[all],"Big Hunt",<NAME>,CENTER,CENTER
+;[action]Action Type
+IMAGE=[all],Actions/TALK.png,<ACTION_ICON>,0,APN
+;[action]instant symbol(locked)
+IMAGE=[all],Actions/INSTANT.png,{1500/19}%,{500/27}%,{200/19}%,{200/27}%,0,PN
 ;cost font
-FONT=Arial,15,TB,#000000
-;cost value
-TEXT=[all],[WOOD_COST],{7500/543}%,{11000/815}%,{4500/543}%,4.54%,CENTER,CENTER
-;Gain font
-FONT=Arial,13,TB,#000000
-;[gain1]gain1 background
-IMAGE=[gain1_cards],Akvile/0.2/gain.png,{5100/543}%,{23900/815}%,{13600/543}%,9.08%,0,N
-;[gain1]gain 1 symbol
-IMAGE=[gain1_cards],[[GAIN_1_TYPE]],{6100/543}%,{24300/815}%,{6200/543}%,7.73%,0,NP
-;[gain1]gain1 number background
-IMAGE=[gain1_number_cards],Akvile/0.2/blue-number.png,{13100/543}%,{24500/815}%,{5100/543}%,{6000/815}%,0,NP
-;[gain1]gain 1 value
-TEXT=[gain1_number_cards],[GAIN_1_NUMBER],{13400/543}%,{25500/815}%,{4500/543}%,4.54%,CENTER,CENTER
-;[gain2]gain2 background
-IMAGE=[gain2_cards],Akvile/0.2/gain.png,{5100/543}%,{32100/815}%,{13600/543}%,{7200/815}%,0,N
-;[gain2]gain2 symbol
-IMAGE=[gain2_cards],[[GAIN_2_TYPE]],{6100/543}%,40%,{6200/543}%,7.73%,0,TP
-;[gain2]gain2 number background
-IMAGE=[gain2_number_cards],Akvile/0.2/blue-number.png,{13100/543}%,{32700/815}%,{5100/543}%,{6000/815}%,0,NP
-;[gain2]gain2 value
-TEXT=[gain2_number_cards],[GAIN_2_NUMBER],{13400/543}%,{33900/815}%,{4500/543}%,4.54%,CENTER,CENTER
-;[gain3]gain3 background
-IMAGE=[gain3_cards],Akvile/0.2/gain.png,{5000/543}%,{39600/815}%,{13600/543}%,{7300/815}%,0,N
-;[gain3]gain3 symbol
-IMAGE=[gain3_cards],[[GAIN_3_TYPE]],11.05%,{39900/815}%,{6400/543}%,{6200/815}%,0,NP
-;gain3 number background
-IMAGE=[gain3_number_cards],Akvile/0.2/blue-number.png,{13000/543}%,{40100/815}%,{5100/543}%,{6000/815}%,0,NP
-;gain2 value
-TEXT=[gain2_number_cards],[GAIN_3_NUMBER],{13400/543}%,50.92%,{4500/543}%,4.54%,CENTER,CENTER
-;[super]Supergain background
-IMAGE=[super_gain1_cards],Akvile/0.2/action-one.png,{1700/543}%,{65600/815}%,{20300/543}%,{11700/815}%,0,NP
-;[super]trigger1
-IMAGE=[trigger1_cards],[[TRIGGER_1]],{3500/543}%,{67500/815}%,{6400/543}%,{7800/815}%,0,NP
-;[super]trigger 2
-IMAGE=[trigger2_cards],[[TRIGGER_2]],{12100/543}%,{67500/815}%,{6100/543}%,{7700/815}%,0,NP
-;[supergain1]super gain 1 background
-IMAGE=[super_gain1_cards],Akvile/0.2/gain.png,{21500/543}%,{67900/815}%,{13600/543}%,9.08%,0,N
-;[supergain1]Supergain1
-IMAGE=[super_gain1_cards],[[SUPER_GAIN_1_TYPE]],{22600/543}%,{68700/815}%,{6100/543}%,7.73%,0,NP
-;[supergain1]supergain1 number background
-IMAGE=[super_gain1_number_cards],Akvile/0.2/blue-number.png,{29400/543}%,{68700/815}%,{5100/543}%,{6000/815}%,0,NP
-;[supergain1]supergain 1 value
-TEXT=[super_gain1_number_cards],[SUPER_GAIN_1_NUMBER],54.88%,85.89%,{4300/543}%,{3800/815}%,CENTER,CENTER
-;[supergain2]super gain 2 background
-IMAGE=[super_gain2_cards],Akvile/0.2/gain.png,68.14%,{68200/815}%,{13600/543}%,{7200/815}%,0,N
-;[supergain2]Supergain2
-IMAGE=[super_gain2_cards],[[SUPER_GAIN_2_TYPE]],{38300/543}%,{67700/815}%,{6700/543}%,{7300/815}%,0,NP
-;[supergain2]supergain1 number background
-IMAGE=[super_gain2_number_cards],Akvile/0.2/blue-number.png,{45000/543}%,84.54%,{5100/543}%,{5900/815}%,0,NP
-;[supergain2]supergain 1 value
-TEXT=[super_gain2_number_cards],[SUPER_GAIN_2_NUMBER],{45300/543}%,85.89%,{4500/543}%,4.54%,CENTER,CENTER
-;Card text Font
+FONT=Calisto MT,16,TB,#00000F,#FFFFFF
+;[cost]permanent cost symbol(locked)
+IMAGE=[all],Akvile/0.2/Cost.png,{100/19}%,{100/27}%,{300/19}%,{300/27}%,0,PN
+;[cost]cost value(locked)
+TEXT=[all],99,{100/19}%,{200/27}%,{300/19}%,{300/27}%,CENTER,CENTER
+;requirements font(locked)
 FONT=Arial,10,T,#000000
-;[score]Score font
-FONT=Arial,12,TB,#000000
-;[score]score background
-IMAGE=[score_cards],Akvile/0.2/votes.png,{41300/543}%,{51800/815}%,14.18%,{8200/815}%,0,PN
-;[score]score value
-TEXT=[score_cards],[SCORE_NUMBER],{42500/543}%,{53400/815}%,{5200/543}%,{6900/815}%,CENTER,CENTER
-;HTMLMARGINS=FontName,0,0,0,0
-ENDVISUAL
+;[req1]requirements1 icon
+IMAGE=[all],Actions/TALK.png,<REQ1>,0,NP
+;[req1]requirements1 background
+IMAGE=[all],Akvile/0.2/blue-number.png,<REQ1NUMBERBACKGROUND>,0,NP
+;[req1]requirement1 number
+TEXT=[all],1,<REQ1NUMBERBACKGROUND>,CENTER,CENTER
+;[req2]requirements2 icon
+IMAGE=[all],Actions/TALK.png,<REQ2>,0,NP
+;[req2]requirements2 background
+IMAGE=[all],Akvile/0.2/blue-number.png,<REQ2NUMBERBACKGROUND>,0,NP
+;[req2]requirement2 number
+TEXT=[all],2,<REQ2NUMBERBACKGROUND>
+;[super]superFrame(locked)
+IMAGE=[all],Frame\superFrame.png,<SUPER>
+;gain frame
+IMAGE=[all],Frame\gainFrame.png,<GAIN>
+;trigger2
+IMAGE=[all],Actions/TALK.png,<SUPERTRIGGER2>,0,PN
+;trigger1
+IMAGE=[all],Actions/FOOD.png,<SUPERTRIGGER1>,0,PN
+;score font(locked)
+FONT=Arial Rounded MT Bold,12,T,#000000
+;[score]score background(locked)
+IMAGE=[all],Akvile/0.2/votes.png,<SCORE>,0,PN
+;[score]score value(locked)
+TEXT=[all],3,<SCORE>,CENTER,CENTER
+
+
+;GAIN FONT ( html)
+HTMLFONT=GainFont,Arial,30,BKZE,#000000,CENTER
+HTMLMARGINS=GainFont,0.2,0.2,0.2,0.2,CENTER,100,30,10
+
+;GAIN HTML
+IF= [GAIN_3] <>""
+    HTMLTEXT=[all],JOIN("",[GAIN_1], "&nbsp;", [GAIN_2], "&nbsp;", [GAIN_3], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
+ELSEIF=[GAIN_2] <>""
+    HTMLTEXT=[all],JOIN("",[GAIN_1], "&nbsp;&nbsp;", [GAIN_2], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
+ELSEIF=[GAIN_2] <>""
+    HTMLTEXT=[all],JOIN("",[GAIN_1], ""),<GAIN>,#FFFFFF,0,EMTF,100,GainFont
+ENDIF
+
+
+;SUPERGAIN
+HTMLTEXT=[all],JOIN("",[SUPER_GAIN], ""),<SUPERGAIN>,#FFFFFF,0,EMTF,100,GainFont
 
 

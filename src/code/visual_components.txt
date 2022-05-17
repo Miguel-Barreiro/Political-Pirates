@@ -1,0 +1,57 @@
+
+;COLORS
+[COLOR_Blue]=#0c00ff
+[COLOR_Black]=#343434
+[COLOR_Red]=#ca2222
+[COLOR_Green]=#2f7e0f
+[COLOR_Yellow]=#e0a903
+[COLOR_Wild]=#8606bc
+
+
+;ACTIONS FRAMES
+
+[ACTION_FRAME_TALK] = "Akvile/0.2/frame-purple.png"
+[ACTION_FRAME_TALK_AMBUSH] = "Akvile/0.2/frame-purple.png"
+
+[ACTION_FRAME_WOOD] = "Akvile/0.2/frame-brown.png"
+[ACTION_FRAME_WOOD_TALK] = "Akvile/0.2/frame-brown.png"
+[ACTION_FRAME_WOOD_AMBUSH] = "Akvile/0.2/frame-brown.png"
+
+[ACTION_FRAME_FOOD] = "Akvile/0.2/frame-red.png"
+[ACTION_FRAME_FOOD_TALK] = "Akvile/0.2/frame-red.png"
+[ACTION_FRAME_FOOD_AMBUSH] = "Akvile/0.2/frame-red.png"
+
+
+;TRIGGER SYMBOLS
+
+[ACTION_ICON_TALK] = Actions/TALK.png
+[ACTION_ICON_TALK_AMBUSH] = Actions/AMBUSH.png
+
+[ACTION_ICON_WOOD] = Actions/WOOD.png
+[ACTION_ICON_WOOD_TALK] = Actions/TALK.png
+[ACTION_ICON_WOOD_AMBUSH] = Actions/AMBUSH.png
+
+[ACTION_ICON_FOOD] = Actions/FOOD.png
+[ACTION_ICON_FOOD_TALK] = Actions/TALK.png
+[ACTION_ICON_FOOD_AMBUSH] = Actions/AMBUSH.png
+
+
+;SCHEME SYMBOLS
+[WOOD.action] = Actions/WOOD.png
+[WOOD_TALK.action] = Actions/TALK.png
+[WOOD_AMBUSH.action] = Actions/AMBUSH.png
+[FOOD.action] = Actions/FOOD.png
+[FOOD_TALK.action] = Actions/TALK.png
+[FOOD_AMBUSH.action] = Actions/AMBUSH.png
+[TALK.action] = Actions/TALK.png
+[TALK_AMBUSH.action] = Actions/AMBUSH.png
+[AMBUSH.action] = Actions/AMBUSH.png
+
+
+;UI
+[GAIN_BACKGROUND] = "Akvile/0.2/gain.png"
+
+
+;header
+
+[EVENT_SCHEME_ICON] = Actions/INSTANT.png

@@ -6,19 +6,54 @@
 [ICON_H] = 1.5
 
 
-[FOOD_ICON] =           "Icons/FoodIcon.png"
-[DRAW_ICON] =           "Icons/DrawIcon.png"
-[INFLUENCE_ICON] =      "Icons/InfluenceIcon.png"
-[RECRUIT_ICON] =        "Icons/RecruitIcon.png"
-[RECRUITFREE_ICON]=     "Icons/RecruitFreetIcon.png"
-[VOTE_ICON] =           "Icons/VoteIcon.png"
-[WOOD_ICON] =           "Icons/WoodIcon.png"
-[STEAL_ICON] =          "Icons/StealIcon.png"
-[PROMOTE_ICON] =        "Icons/PromoteIcon.png"
-[FIGHT_ICON] =          "Icons/PushoutIcon.png"
-[SHELTER_ICON] =        "Icons/ShelterIcon.png"
-[BUILD_ICON]=           "Icons/BuildIcon.png"
-[EXECUTE_ICON]=         "Icons/executeIcon.png"
+;UI
+
+[NUMBER_BACKGROUND] = UI/blue-number.png
+[VOTES_BACKGROUND] = UI/votes.png
+
+;ACTIONS
+
+;[_ACTION_ICON] = ""
+[ACTION_ICON_WOOD] =    Actions/WOOD.png
+[ACTION_ICON_FOOD] =    Actions/FOOD.png
+[ACTION_ICON_AMBUSH] =  Actions/AMBUSH.png
+[ACTION_ICON_TALK] =    Actions/TALK.png
+
+[WOOD_ACTION_ICON] =    [ACTION_ICON_WOOD]
+[FOOD_ACTION_ICON] =    [ACTION_ICON_FOOD]
+[AMBUSH_ACTION_ICON] =  [ACTION_ICON_AMBUSH]
+[TALK_ACTION_ICON] =    [ACTION_ICON_TALK]
+
+
+
+[WOOD] =    Actions/WOOD.png
+[FOOD] =    Actions/FOOD.png
+[AMBUSH] =  Actions/AMBUSH.png
+[TALK] =    Actions/TALK.png
+
+
+
+;TRIGGERS
+[WOOD_TRIGGER] =        Actions/WOOD.png
+[FOOD_TRIGGER] =        Actions/FOOD.png
+[AMBUSH_TRIGGER] =      Actions/AMBUSH.png
+[TALK_TRIGGER] =        Actions/TALK.png
+
+
+
+[FOOD_ICON] =           Icons/FoodIcon.png
+[DRAW_ICON] =           Icons/DrawIcon.png
+[INFLUENCE_ICON] =      Icons/InfluenceIcon.png
+[RECRUIT_ICON] =        Icons/RecruitIcon.png
+[RECRUITFREE_ICON]=     Icons/RecruitFreetIcon.png
+[VOTE_ICON] =           Icons/VoteIcon.png
+[WOOD_ICON] =           Icons/WoodIcon.png
+[STEAL_ICON] =          Icons/StealIcon.png
+[PROMOTE_ICON] =        Icons/PromoteIcon.png
+[FIGHT_ICON] =          Icons/PushoutIcon.png
+[SHELTER_ICON] =        Icons/ShelterIcon.png
+[BUILD_ICON]=           Icons/BuildIcon.png
+[EXECUTE_ICON]=         Icons/executeIcon.png
 
 
 [FOOD_ICON_1] =           "Icons/FoodIcon.png"
@@ -109,9 +144,39 @@
 [FOOD_ICON_16] =       "Icons/FoodIcon.png"
 
 
+;COST ICONS
+
+[FOOD_COST_ICON_1] =           "Icons/resources/cst_r1_food.png"
+[FOOD_COST_ICON_2] =           "Icons/resources/cst_r2_food.png"
+[FOOD_COST_ICON_3] =           "Icons/resources/cst_r3_food.png"
+[FOOD_COST_ICON_4] =           "Icons/resources/cst_r4_food.png"
+[FOOD_COST_ICON_5] =           "Icons/resources/cst_r5_food.png"
+[FOOD_COST_ICON_6] =           "Icons/resources/cst_r5_food.png"
+[FOOD_COST_ICON_7] =           "Icons/resources/cst_r5_food.png"
+
+[WOOD_COST_ICON_1] =           "Icons/resources/cst_r1_wood.png"
+[WOOD_COST_ICON_2] =           "Icons/resources/cst_r2_wood.png"
+[WOOD_COST_ICON_3] =           "Icons/resources/cst_r3_wood.png"
+[WOOD_COST_ICON_4] =           "Icons/resources/cst_r4_wood.png"
+[WOOD_COST_ICON_5] =           "Icons/resources/cst_r5_wood.png"
+[WOOD_COST_ICON_6] =           "Icons/resources/cst_r5_wood.png"
+[WOOD_COST_ICON_7] =           "Icons/resources/cst_r5_wood.png"
+
+[DRAW_COST_ICON_1] =           "Icons/resources/cst_r5_wood.png"
+[DRAW_COST_ICON_2] =           "Icons/resources/cst_r5_wood.png"
+[DRAW_COST_ICON_3] =           "Icons/resources/cst_r5_wood.png"
+[DRAW_COST_ICON_4] =           "Icons/resources/cst_r5_wood.png"
+[DRAW_COST_ICON_5] =           "Icons/resources/cst_r5_wood.png"
+
 
 
 ;HTML TOKENS
+
+[TALK_SYMBOL_TOKEN] = "(T)"
+[AMBUSH_SYMBOL_TOKEN] = "(A)"
+[FOOD_SYMBOL_TOKEN] = "(F)"
+[WOOD_SYMBOL_TOKEN] = "(W)"
+
 
 [FOOD_TOKEN] = "food"
 [DRAW_TOKEN] = "draw"
@@ -129,6 +194,33 @@
 
 
 ;[FOOD_TOKEN_1] = JOIN("(",[FOOD_TOKEN], "_1)")
+
+[FOOD_COST_TOKEN_1] =            JOIN("(",[FOOD_TOKEN], "Cost_1)")
+[FOOD_COST_TOKEN_2] =            JOIN("(",[FOOD_TOKEN], "Cost_2)")
+[FOOD_COST_TOKEN_3] =            JOIN("(",[FOOD_TOKEN], "Cost_3)")
+[FOOD_COST_TOKEN_4] =            JOIN("(",[FOOD_TOKEN], "Cost_4)")
+[FOOD_COST_TOKEN_5] =            JOIN("(",[FOOD_TOKEN], "Cost_5)")
+[FOOD_COST_TOKEN_6] =            JOIN("(",[FOOD_TOKEN], "Cost_6)")
+[FOOD_COST_TOKEN_7] =            JOIN("(",[FOOD_TOKEN], "Cost_7)")
+
+[WOOD_COST_TOKEN_1] =            JOIN("(",[WOOD_TOKEN], "Cost_1)")
+[WOOD_COST_TOKEN_2] =            JOIN("(",[WOOD_TOKEN], "Cost_2)")
+[WOOD_COST_TOKEN_3] =            JOIN("(",[WOOD_TOKEN], "Cost_3)")
+[WOOD_COST_TOKEN_4] =            JOIN("(",[WOOD_TOKEN], "Cost_4)")
+[WOOD_COST_TOKEN_5] =            JOIN("(",[WOOD_TOKEN], "Cost_5)")
+[WOOD_COST_TOKEN_6] =            JOIN("(",[WOOD_TOKEN], "Cost_6)")
+[WOOD_COST_TOKEN_7] =            JOIN("(",[WOOD_TOKEN], "Cost_7)")
+
+[DRAW_COST_TOKEN_1] =            JOIN("(",[DRAW_TOKEN], "Cost_1)")
+[DRAW_COST_TOKEN_2] =            JOIN("(",[DRAW_TOKEN], "Cost_2)")
+[DRAW_COST_TOKEN_3] =            JOIN("(",[DRAW_TOKEN], "Cost_3)")
+[DRAW_COST_TOKEN_4] =            JOIN("(",[DRAW_TOKEN], "Cost_4)")
+[DRAW_COST_TOKEN_5] =            JOIN("(",[DRAW_TOKEN], "Cost_5)")
+
+
+
+
+
 [FOOD_TOKEN_0] =            JOIN("(",[FOOD_TOKEN], ")")
 [DRAW_TOKEN_0] =            JOIN("(",[DRAW_TOKEN], ")")
 [INFLUENCE_TOKEN_0] =       JOIN("(",[INFLUENCE_TOKEN], ")")

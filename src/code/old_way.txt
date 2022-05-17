@@ -1,0 +1,63 @@
+
+
+
+
+[instants] = labelrange([SKILL_INSTANT], "Yes")
+
+;rewards
+;[1I] = rewards/1I.png
+;[2I] = rewards/2I.png
+
+;ICONS
+
+;[wood] = Akvile/0.2/Icons/WoodIcon.png
+;[food] = Akvile/0.2/Icons/FoodIcon.png
+;[maneuver] = Akvile/0.2/Icons/ManeuverIcon.png
+;[vote] = Akvile/0.2/Icons/VoteIcon.png
+;[draw] = Akvile/0.2/Icons/DrawIcon.png
+;[promote] = Akvile/0.2/Icons/PromoteIcon.png
+;[promote2] = Akvile/0.2/Icons/PromoteIcon.png
+;[demote] = Akvile/0.2/Icons/DemoteIcon.png
+;[pushout] = Akvile/0.2/Icons/PushoutIcon.png
+;[pushout2] = Akvile/0.2/Icons/PushoutIcon.png
+;[passive] = Akvile/0.2/Icons/PassiveIcon.png
+;[recruit] = Akvile/0.2/Icons/RecruitIcon.png
+;[recruit2] = Akvile/0.2/Icons/RecruitIcon.png
+;[recruit-Free] = Akvile/0.2/Icons/RecruitFreetIcon.png
+;[recruit-Free2] = Akvile/0.2/Icons/RecruitFreetIcon.png
+;[execute] = Akvile/0.2/Icons/ExecuteIcon.png
+;[execute2] = Akvile/0.2/Icons/ExecuteIcon.png
+;[steal] = Akvile/0.2/Icons/StealIcon.png
+;[utility] = Akvile/0.2/Icons/UtilityIcon.png
+;[foodBonus] = Akvile/0.2/Icons/FoodIcon.png
+;[woodBonus] = Akvile/0.2/Icons/WoodIcon.png
+;[influence] = Akvile/0.2/Icons/InfluenceIcon.png
+
+
+[Black_1]= rewards/BLACK1.png
+[Black_2]= rewards/BLACK2.png
+[Blue_1]= rewards/BLUE1.png
+[Blue_2]= rewards/BLUE2.png
+[Red_1]= rewards/RED1.png
+[Red_2]= rewards/RED2.png
+[Wild_1]= rewards/WILD1.png
+[Wild_2]= rewards/WILD2.png
+[Yellow_1]= rewards/YELLOW1.png
+[Yellow_2]= rewards/YELLOW2.png
+[Green_1]= rewards/GREEN1.png
+[Green_2]= rewards/GREEN2.png
+
+
+
+[SKILL_TYPE]=TOKENIZESEQ([SKILL], 1, _)
+[SKILL_NUMBER]=TOKENIZESEQ([SKILL], 2, _)
+
+[skill_cards]=RANGEREM([all], labelrange([SKILL_TYPE], ""))
+[skill_number_cards]=RANGEREM([all], labelrange([SKILL_NUMBER], ""))
+
+[FACTION_TYPE]=TOKENIZESEQ([FACTION], 1, _)
+[FACTION_NUMBER]=TOKENIZESEQ([FACTION], 2, _)
+
+
+[COST_TYPE]=TOKENIZESEQ([COST_NEUTRAL], 1, _)
+[COST_VALUE]=TOKENIZESEQ([COST_NEUTRAL], 2, _)
