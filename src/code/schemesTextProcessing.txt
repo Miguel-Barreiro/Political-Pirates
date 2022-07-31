@@ -42,7 +42,7 @@
 
 
 
-
+[TRIGGER_2_FINAL] = [ACTION_ICON_[TRIGGER_2]]
 
 
 ;IF= [GAIN_3] <>""
